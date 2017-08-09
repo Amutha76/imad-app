@@ -42,17 +42,15 @@ var htmlContent=
                 <a href="/">Home</a>
                 <hr>
             </div>
-            <div>
-                <h3>
-                   ${heading}
-                </h3>
-            </div>
-            <div>
-                    ${date}
-            </div>
-            <div>
+            <h3>
+                ${heading}
+            </h3>
+            <p>
+               ${date}
+            </p>
+            <p>
                ${content}        
-            </div>
+            </p>
     </body>
 </html>`;
 return htmlContent;
