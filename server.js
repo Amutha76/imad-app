@@ -26,8 +26,8 @@ content : ` <div>
 function createTemplate(data){
 var title=data.title;
 var heading=data.heading;
-var date=title.date;
-var content=title.content;
+var date=data.date;
+var content=data.content;
 
 var htmlContent=
    ` <html>
