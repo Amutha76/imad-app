@@ -10,7 +10,7 @@ element.innerHTML= "New Value";
 
 //Moving the image
 var madi=document.getElementById("madi");
-madi.onClick=function(){
+madi.onclick=function(){
 alert("I am inside onclick");
 madi.style.leftMargin='100px';
 }
