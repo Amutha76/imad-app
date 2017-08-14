@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var articles={
 
     'article-one':{
-        title :'Article One | Amuthalakshmi Balasubramanian',
+        title :'Article One  Amuthalakshmi Balasubramanian',
         heading:'Article One',
         date : ' August 4, 2017',
         content : `<div>
@@ -17,7 +17,7 @@ var articles={
          
     },
     'article-two':{
-        title :'Article Two | Amuthalakshmi Balasubramanian',
+        title :'Article Two  Amuthalakshmi Balasubramanian',
         heading:'Article Two',
         date : ' August 6, 2017',
         content : `<div>
@@ -26,7 +26,7 @@ var articles={
                
     },
     'article-three':{
-    title :'Article Three | Amuthalakshmi Balasubramanian',
+    title :'Article Three  Amuthalakshmi Balasubramanian',
     heading:'Article Three',
     date : ' August 8, 2017',
     content : `<div>
