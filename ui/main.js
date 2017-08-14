@@ -12,6 +12,6 @@ element.innerHTML= "New Value";
 var madi=document.getElementById("madi");
 madi.onclick=function(){
 alert("I am inside onclick");
-madi.style.leftMargin='100px';
+madi.style.marginLeft='100px';
 }
   
