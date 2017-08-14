@@ -7,25 +7,25 @@ app.use(morgan('combined'));
 
 var articles={
 
-articleOne:{
-    title :'Article One | Amuthalakshmi Balasubramanian',
-    heading:'Article One',
-    date : ' August 4, 2017',
-    content : `<div>
-            This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one.
-            </div>`
-     
-},
-articleTwo:{
-    title :'Article Two | Amuthalakshmi Balasubramanian',
-    heading:'Article Two',
-    date : ' August 6, 2017',
-    content : `<div>
-                    This is the content for article Two. 
+    'article-one':{
+        title :'Article One | Amuthalakshmi Balasubramanian',
+        heading:'Article One',
+        date : ' August 4, 2017',
+        content : `<div>
+                This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one.
                 </div>`
-           
-},
-articleThree:{
+         
+    },
+    'article-two':{
+        title :'Article Two | Amuthalakshmi Balasubramanian',
+        heading:'Article Two',
+        date : ' August 6, 2017',
+        content : `<div>
+                        This is the content for article Two. 
+                    </div>`
+               
+    },
+    'article-three':{
     title :'Article Three | Amuthalakshmi Balasubramanian',
     heading:'Article Three',
     date : ' August 8, 2017',
@@ -33,27 +33,9 @@ articleThree:{
                     This is the content for article Three. 
                 </div>`
 }
-    
-    
-}
 
-var articleOne ={
-title :'Article One | Amuthalakshmi Balasubramanian',
-heading:'Article One',
-date : ' August 2017',
-content : ` <div>
-            This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one.
-            </div>
-            
-            <div>
-                This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one.
-            </div>
-            <div>
-                This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one. This is the content for article one.
-            </div>`
+    };
 
-    
-}
 
 function createTemplate(data){
 var title=data.title;
@@ -97,8 +79,9 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/article-one', function(req,res){
-res.send(createTemplate(articleOne));
+app.get('/:articleName', function(req,res){
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles(articleName)));
 });
 
 app.get('/article-two', function(req,res){
