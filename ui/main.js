@@ -18,6 +18,7 @@ function moveright(marginleft){
 }
 
 madi.onclick=function(){
+    alert("I am inside onclick")
 var interval=setInterval(moveright,100);
 };
   
