@@ -10,8 +10,14 @@ element.innerHTML= "New Value";
 
 //Moving the image
 var madi=document.getElementById("madi");
-madi.onclick=function(){
-alert("I am inside onclick");
-madi.style.marginLeft='100px';
+var marginleft=0;
+
+function moveright(marginleft){
+  marginleft=marginleft+10;
+  madi.style.marginLeft=marginleft +'px';
 }
+
+madi.onclick=function(){
+var interval=setInterval(moveright,100);
+};
   
