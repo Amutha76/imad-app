@@ -5,8 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-alert('I am in server.js');
-
+console.log('server.js')
 var articles={
 
     'article-one':{
