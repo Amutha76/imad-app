@@ -1,5 +1,4 @@
 var button=document.getElementById('btncounter');
-console.log('main.js');
 var counter=0;
 button.onclick=function(){
     
