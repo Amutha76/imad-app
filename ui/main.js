@@ -3,9 +3,9 @@ var button=document.getElementById('btncounter');
 button.onclick=function(){
     
     var request=new XMLHttpRequest();
-    
+     alert('tes3t');
     if (request.readyState== XMLHttpRequest.DONE){
-        
+         alert('test1');
         if(request.status==200){
             alert('test');
             var counter=request.responseText;
