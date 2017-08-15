@@ -7,6 +7,7 @@ button.onclick=function(){
     if (request.readyState== XMLHttpRequest.DONE){
         
         if(request.status==200){
+            alert('test');
             var counter=request.responseText;
             var span=document.getElementById('spncount');
             span.innerHTML=counter.toString();        
