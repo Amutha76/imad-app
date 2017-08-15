@@ -39,7 +39,7 @@ var articles={
 
 var title='Amutha home page';
 function createTemplate(data){
-var title=data.title;
+var tit=data.title;
 var heading=data.heading;
 var date=data.date;
 var content=data.content;
@@ -47,7 +47,7 @@ var content=data.content;
 var htmlContent=
    ` <html>
     <head>
-        <title>${title}</title>
+        <title>${tit}</title>
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link href="/ui/style.css" rel="stylesheet" />
     </head>
