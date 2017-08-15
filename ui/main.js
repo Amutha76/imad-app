@@ -1,7 +1,9 @@
 var button=document.getElementById('btncounter');
 
 button.onclick=function(){
-     var request=new XMLHttpRequest();
+     var request=new XMLHttpRequest(),
+     method="GET",
+     url="http://bamutha76.imad.hasura-app.io";
      alert('test');
      request.onreadystatechange=function(){
         alert('test 2');
