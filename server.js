@@ -37,7 +37,7 @@ var articles={
 
     };
 
-
+var title='Amutha home page';
 function createTemplate(data){
 var title=data.title;
 var heading=data.heading;
