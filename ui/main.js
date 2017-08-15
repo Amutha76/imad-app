@@ -5,6 +5,7 @@ button.onclick=function(){
      method="GET",
      url="http://bamutha76.imad.hasura-app.io";
      request.open(method,url,true);
+     alert('kk'+request.onreadystatechange);
      request.onreadystatechange=function(){
         alert('test 2');
         if (request.readyState=== XMLHttpRequest.DONE){
