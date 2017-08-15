@@ -6,7 +6,7 @@ button.onclick=function(){
      
    
     alert('tes3t ' + request.readyState + ' ' + XMLHttpRequest.DONE);
-    if (request.readyState== XMLHttpRequest.DONE){
+    if (request.readyState=== 0){
          alert('test1');
         if(request.status==200){
             alert('test');
