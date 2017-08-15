@@ -4,8 +4,7 @@ button.onclick=function(){
     
     var request=new XMLHttpRequest();
      
-    request.open('GET','http://bamutha76.imad.hasura-app.io/counter',true);
-    request.send(null);
+   
     alert('tes3t ' + request.readyState + ' ' + XMLHttpRequest.DONE);
     if (request.readyState== XMLHttpRequest.DONE){
          alert('test1');
@@ -17,7 +16,8 @@ button.onclick=function(){
         }
     }
     
-   
+    request.open('GET','http://bamutha76.imad.hasura-app.io/counter',true);
+    request.send(null);   
     
 };
 
