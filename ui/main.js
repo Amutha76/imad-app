@@ -3,7 +3,7 @@ var button=document.getElementById('btncounter');
 button.onclick=function(){
     
     var request=new XMLHttpRequest();
-     alert('tes3t');
+     alert('tes3t' + request.readyState);
     if (request.readyState== XMLHttpRequest.DONE){
          alert('test1');
         if(request.status==200){
