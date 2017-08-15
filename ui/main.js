@@ -1,11 +1,12 @@
 var button=document.getElementById('btncounter');
 
 button.onclick=function(){
-     var request=new XMLHttpRequest(),
-     method="GET",
-     url="http://bamutha76.imad.hasura-app.io";
-     request.open(method,url,true);
+     var request=new XMLHttpRequest();
+     //method="GET",
+     //url="http://bamutha76.imad.hasura-app.io";
+     //request.open(method,url,true);
      alert('kk'+request.onreadystatechange);
+     alert('readystate is ' + request.readyState);
      request.onreadystatechange=function(){
         alert('test 2');
         if (request.readyState=== XMLHttpRequest.DONE){
