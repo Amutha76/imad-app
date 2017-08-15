@@ -7,7 +7,7 @@ button.onclick=function(){
    
     alert('tes3t ' + request.readyState + ' ' + XMLHttpRequest.DONE);
     if (request.readyState=== 0){
-         alert('test1');
+         alert('test1 ' + request.status);
         if(request.status==200){
             alert('test');
             var counter=request.responseText;
