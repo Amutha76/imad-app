@@ -1,4 +1,5 @@
 var button=document.getElementById('btncounter');
+alert(button.innerHTML);
 var counter=0;
 button.onClick=function(){
     alert(' I am inside click function');
