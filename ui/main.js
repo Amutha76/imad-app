@@ -22,9 +22,10 @@ button.onclick=function(){
 };
 
 submitName.onclick=function(){
-  var EleName=document.getElementById("txtName");    
+  var EleName=document.getElementById("txtName");  
+  var name=EleName.value;
   var request=new XMLHttpRequest();
-  request.open('GET','http://bamutha76.imad.hasura-app.io/submit-name?name='+EleName,true);
+  request.open('GET','http://bamutha76.imad.hasura-app.io/submit-name?name='+ name,true);
   request.send(null); 
  
   request.onreadystatechange=function(){
