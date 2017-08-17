@@ -6,11 +6,10 @@ button.onclick=function(){
      request.send(null);    
      
      request.onreadystatechange=function(){
-      alert('test 2');
+  
      if (request.readyState=== XMLHttpRequest.DONE){
             
             if(request.status==200){
-               alert('test');
                 var counter=request.responseText;
                 var span=document.getElementById('spncount');
                 span.innerHTML=counter.toString();        
