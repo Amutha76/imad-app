@@ -1,4 +1,7 @@
 var button=document.getElementById('btncounter');
+var EleName=document.getElementById("txtName");
+var submitName=document.getElementById("btnsubmitName");
+alert('submit ' + submitName.value);
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
@@ -17,17 +20,15 @@ button.onclick=function(){
         }
 };
 
-var EleName=document.getElementById("txtName");
-var name=EleName.value;
 
-var submitName=document.getElementById("btnsubmitName");
-alert('submit ' + submitName.value);
+
 submitName.onclick=function(){
-    alert('inside onclick');
+   
   var names=['Name 1', 'Name 2', 'Name 3', 'Name 4'];
   var list='';
   for( var i=0; i<names.length ; i++){
       list+='<li>' + names[i] + '</li>';
+       alert('inside onclick' + names[i]);
   }
   
   var ulName=document.getElementById("ulName");
