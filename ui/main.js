@@ -20,7 +20,7 @@ button.onclick=function(){
         }
 };
 
-
+};
 
 submitName.onclick=function(){
    
@@ -41,4 +41,4 @@ submitName.onclick=function(){
 //{
   //  alert('fff');
 //};
-};
+
