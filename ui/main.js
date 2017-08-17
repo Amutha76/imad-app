@@ -1,7 +1,7 @@
 var button=document.getElementById('btncounter');
 
 button.onclick=function(){
-    // var request=new XMLHttpRequest();
+     var request=new XMLHttpRequest();
      //request.open();
      //request.send();
      //method="GET",
@@ -25,11 +25,8 @@ button.onclick=function(){
     
 //};
 
-if (window.XMLHttpRequest){
-    alert('a');
-}
-else
+request.onreadystatechange=function()
 {
-    alert('b');
-}
+    alert('fff');
+};
 };
