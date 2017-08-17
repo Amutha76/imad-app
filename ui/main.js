@@ -27,7 +27,7 @@ submitName.onclick=function(){
   request.open('GET','http://bamutha76.imad.hasura-app.io/submit-name?name='+EleName,true);
   request.send(null); 
   var names=request.responseText; 
-  names=JSON.parse(resName);
+  names=JSON.parse(names);
   var list='';
   request.onreadystatechange=function(){
   
