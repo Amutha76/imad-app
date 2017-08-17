@@ -2,6 +2,8 @@
 console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
+var articleOneDate=document.getElementById("articleOnespDate");
+articleOneDate.innerHTML=new Date();
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
