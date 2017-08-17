@@ -13,6 +13,7 @@ var articles={
         heading:'Article One',
         date : ' August 4, 2017',
         content : `<div>
+                      Welcome to Article One. Please enter your commnets!!
                       <input type="text" id="txtComment">
                       <input type="submit" id="btnSubmit">
                    </div>`
