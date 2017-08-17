@@ -2,11 +2,9 @@
 console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
-var articleOneDate=document.getElementById("articleOnespDate");
-var date=new Date();
-articleOneDate.innerHTML=date.toDateString();
+alert('fgg');
 
-alert('hi');
+
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
