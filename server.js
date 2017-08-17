@@ -70,6 +70,8 @@ var htmlContent=
             <p>
                ${content}        
             </p>
+            <script type="text/javascript" src="/ui/main.js">
+            </script>
     </body>
 </html>`;
 return htmlContent;
