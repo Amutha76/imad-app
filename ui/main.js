@@ -49,10 +49,10 @@ submitName.onclick=function(){
 };
 
 articleOneSubmitName.onclick=function(){
-  var articleOneEleName=document.getElementById("txtName");  
+  var articleOneEleName=document.getElementById("articleOnetxtComment");  
   var name=articleOneEleName.value;
   var request=new XMLHttpRequest();
-  request.open('GET','http://bamutha76.imad.hasura-app.io/submit-name?name='+ name,true);
+  request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
   request.send(null); 
  
   request.onreadystatechange=function(){
