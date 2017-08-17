@@ -21,7 +21,7 @@ var EleName=document.getElementById("txtName");
 var name=EleName.value;
 
 var submitName=document.getElementById("btnsubmitName");
-alert(submitName.value);
+alert('submit ' + submitName.value);
 submitName.onclick=function(){
     alert('inside onclick');
   var names=['Name 1', 'Name 2', 'Name 3', 'Name 4'];
