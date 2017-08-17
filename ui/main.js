@@ -1,7 +1,7 @@
 var button=document.getElementById('btncounter');
 var EleName=document.getElementById("txtName");
 var submitName=document.getElementById("btnsubmitName");
-
+ var ulName=document.getElementById("ulName");
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
@@ -32,7 +32,7 @@ submitName.onclick=function(){
   }
   
   alert(list);
-  var ulName=document.getElementById("ulName");
+ 
   ulName.innerHtml=list;
     
 };
