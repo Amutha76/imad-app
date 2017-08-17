@@ -20,18 +20,12 @@ button.onclick=function(){
         //    }
     //    }
     
-    // request.open('GET','http://bamutha76.imad.hasura-app.io/counter',true);
-    //request.send(null);     
+     request.open('GET','http://bamutha76.imad.hasura-app.io/counter',true);
+     request.send(null);     
     
 //};
 
-  if (!request) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      }
-else
-    {
-        alert('dont give up');
-    }
+ 
 request.onreadystatechange=function()
 {
     alert('fff');
