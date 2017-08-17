@@ -2,9 +2,8 @@
 console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
-alert('fgg');
-
-
+var articleOneSubmitName=document.getElementById("articleOnebtnSubmit");
+alert(articleOneSubmitName.width);
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
@@ -52,8 +51,7 @@ submitName.onclick=function(){
 
 };
 
-var articleOneSubmitName=document.getElementById("articleOnebtnSubmit");
-alert(articleOneSubmitName.width);
+
 
 articleOneSubmitName.onclick=function(){
     alert('I am inside articleone submit');
