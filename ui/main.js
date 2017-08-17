@@ -5,6 +5,8 @@ var submitName=document.getElementById("btnsubmitName");
 var articleOneDate=document.getElementById("articleOnespDate");
 articleOneDate.innerHTML=new Date();
 
+alert('hi');
+
 button.onclick=function(){
      var request=new XMLHttpRequest();
      request.open('GET','http://bamutha76.imad.hasura-app.io/counter',true);
