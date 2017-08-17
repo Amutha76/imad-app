@@ -1,5 +1,4 @@
 var button=document.getElementById('btncounter');
-var EleName=document.getElementById("txtName");
 var submitName=document.getElementById("btnsubmitName");
  var ulName=document.getElementById("ulName");
 
@@ -23,13 +22,26 @@ button.onclick=function(){
 };
 
 submitName.onclick=function(){
-   
-  var names=['Name 1', 'Name 2', 'Name 3', 'Name 4'];
+  var EleName=document.getElementById("txtName");    
+  var request=new XMLHttpRequest();
+  request.open('GET','http://bamutha76.imad.hasura-app.io/submit-name?name='+EleName,true);
+  request.send(null); 
+  var resName=request.responseText; 
+  names=JSON.parse(resName);
   var list='';
-  for( var i=0; i<names.length ; i++){
-      list+='<li>' + names[i] + '</li>';
+  request.onreadystatechange=function(){
+  
+     if (request.readyState=== XMLHttpRequest.DONE){
+            
+            if(request.status==200){
+                for( var i=0; i<names.length ; i++){
+                    list+='<li>' + names[i] + '</li>';
       
-  }
+                }        
+            }
+        }
+};
+ 
   
   ulName.innerHTML=list;
     
