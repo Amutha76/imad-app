@@ -27,7 +27,7 @@ button.onclick=function(){
 
   if (!request) {
       alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+      
     }
 request.onreadystatechange=function()
 {
