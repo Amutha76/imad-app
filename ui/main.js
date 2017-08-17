@@ -31,8 +31,6 @@ submitName.onclick=function(){
       
   }
   
-  alert(list);
- 
   ulName.innerHTML=list;
     
 };
