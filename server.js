@@ -23,7 +23,7 @@ var articles={
         heading:'Article Two',
         date : ' August 6, 2017',
         content : `<div>
-                        This is the content for article Two. 
+                        This is the content for article Two hhjjkjhhgfghh. 
                     </div>`
                
     },
