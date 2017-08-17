@@ -33,7 +33,7 @@ submitName.onclick=function(){
   
   alert(list);
  
-  ulName.innerHtml=list;
+  ulName.innerHTML=list;
     
 };
 
