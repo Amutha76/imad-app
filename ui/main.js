@@ -1,7 +1,7 @@
 var button=document.getElementById('btncounter');
 var EleName=document.getElementById("txtName");
 var submitName=document.getElementById("btnsubmitName");
-alert('submit ' + submitName.value);
+
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
