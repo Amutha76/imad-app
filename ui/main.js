@@ -49,6 +49,7 @@ submitName.onclick=function(){
 };
 
 articleOneSubmitName.onclick=function(){
+    alert('I am inside articleone submit');
   var articleOneEleName=document.getElementById("articleOnetxtComment");  
   var name=articleOneEleName.value;
   var request=new XMLHttpRequest();
