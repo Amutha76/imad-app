@@ -32,7 +32,7 @@ var articles={
     heading:'Article Three',
     date : ' August 8, 2017',
     content : `<div>
-                    This is the content for article Three. 
+                    This is the content for article jhhjghgjhg Three. 
                 </div>`
 }
 
