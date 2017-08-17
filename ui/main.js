@@ -3,7 +3,8 @@ console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
 var articleOneDate=document.getElementById("articleOnespDate");
-articleOneDate.innerHTML=new Date();
+var date=new Date();
+articleOneDate.innerHTML=date.toDateString();
 
 alert('hi');
 
