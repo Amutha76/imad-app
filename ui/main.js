@@ -1,6 +1,7 @@
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
 var articleOneSubmitName=document.getElementById("articleOnebtnSubmit");
+alert(articleOneSubmitName.width);
 
 button.onclick=function(){
      var request=new XMLHttpRequest();
