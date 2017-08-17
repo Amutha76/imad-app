@@ -81,6 +81,13 @@ app.get('/submit-name', function (req, res) {
   
 });
 
+var articleOneNames=[];
+app.get('/article-one/submit-name', function (req, res) {
+  var articleOneName=req.query.name;
+  articleOneNames.push(articleOneName);
+  res.send(JSON.stringify(articleOneNames));
+  
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
