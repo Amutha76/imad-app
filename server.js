@@ -14,7 +14,7 @@ var articles={
         date : ' August 4, 2017',
         content : `<div>
                       Welcome to Article One. Please enter your commnets!!<p>
-                      <input type="text" id="txtComment">
+                      <input type="text" id="txtComment" size=300>
                       <input type="submit" id="btnSubmit">
                    </div>`
          
