@@ -10,8 +10,11 @@ articleSubmitName.onclick=function(){
   var name=articleEleName.value;
   var request=new XMLHttpRequest();
   if(articleSubmitName.alt=="Article-one"){
-  request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
-  }
+         request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
+    }
+  else  if(articleSubmitName.alt=="Article-two"){
+  request.open('GET','http://bamutha76.imad.hasura-app.io/article-two/submit-name?name='+ name,true);
+  }    
   request.send(null); 
  
   request.onreadystatechange=function(){
