@@ -26,8 +26,12 @@ var articles={
         heading:'Article Two',
         date : ' August 6, 2017',
         content : `<div>
-                        This is the content for article Two hhjjkjhhgfghh. 
-                    </div>`
+                      Welcome to Article One. Please enter your commnets!!<p>
+                      <input type="text" id="articletxtComment" size="50" width="500">
+                      <input type="submit" id="articlebtnSubmit" alt="Article-two">
+                      <br/>
+                      <ul id="articleUl"></ul>
+                   </div>`
                
     },
     'article-three':{
@@ -92,6 +96,14 @@ app.get('/article-one/submit-name', function (req, res) {
   var articleOneName=req.query.name;
   articleOneNames.push(articleOneName);
   res.send(JSON.stringify(articleOneNames));
+  
+});
+
+var articleTwoNames=[];
+app.get('/article-two/submit-name', function (req, res) {
+  var articleTwoName=req.query.name;
+  articleTwoNames.push(articleTwoName);
+  res.send(JSON.stringify(articleTwoNames));
   
 });
 
