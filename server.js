@@ -38,9 +38,13 @@ var articles={
     title :'Article Three  Amuthalakshmi Balasubramanian',
     heading:'Article Three',
     date : ' August 8, 2017',
-    content : `<div>
-                    This is the content for article jhhjghgjhg Three. 
-                </div>`
+    content :`<div>
+                      Welcome to Article One. Please enter your commnets!!<p>
+                      <input type="text" id="articletxtComment" size="50" width="500">
+                      <input type="submit" id="articlebtnSubmit" alt="Article-three">
+                      <br/>
+                      <ul id="articleUl"></ul>
+               </div>`
 }
 
     };
@@ -104,6 +108,14 @@ app.get('/article-two/submit-name', function (req, res) {
   var articleTwoName=req.query.name;
   articleTwoNames.push(articleTwoName);
   res.send(JSON.stringify(articleTwoNames));
+  
+});
+
+var articleThreeNames=[];
+app.get('/article-three/submit-name', function (req, res) {
+  var articleThreeName=req.query.name;
+  articleThreeNames.push(articleThreeName);
+  res.send(JSON.stringify(articleThreeNames));
   
 });
 
