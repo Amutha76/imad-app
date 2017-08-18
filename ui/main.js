@@ -13,7 +13,10 @@ articleSubmitName.onclick=function(){
          request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
     }
   else  if(articleSubmitName.alt=="Article-two"){
-  request.open('GET','http://bamutha76.imad.hasura-app.io/article-two/submit-name?name='+ name,true);
+        request.open('GET','http://bamutha76.imad.hasura-app.io/article-two/submit-name?name='+ name,true);
+    }
+  else  if(articleSubmitName.alt=="Article-three"){
+        request.open('GET','http://bamutha76.imad.hasura-app.io/article-three/submit-name?name='+ name,true);
   }    
   request.send(null); 
  
