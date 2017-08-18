@@ -18,7 +18,7 @@ articleSubmitName.onclick=function(){
             
             if(request.status==200){
                 var names=request.responseText;
-                var ulName=document.getElementById("articleOneUl");
+                var ulName=document.getElementById("articleUl");
                 names=JSON.parse(names);
                  var list='';
                 for( var i=0; i<names.length ; i++){
