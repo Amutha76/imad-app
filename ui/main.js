@@ -10,7 +10,9 @@ articleSubmitName.onclick=function(){
   var articleEleName=document.getElementById("articletxtComment");  
   var name=articleEleName.value;
   var request=new XMLHttpRequest();
+  if(articleSubmitName.alt=="Article-one"){
   request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
+  }
   request.send(null); 
  
   request.onreadystatechange=function(){
