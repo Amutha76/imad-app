@@ -15,7 +15,7 @@ var articles={
         content : `<div>
                       Welcome to Article One. Please enter your commnets!!<p>
                       <input type="text" id="articletxtComment" size="50" width="500">
-                      <input type="submit" id="articlebtnSubmit" width="100">
+                      <input type="submit" id="articlebtnSubmit" alt="Article-one">
                       <br/>
                       <ul id="articleUl"></ul>
                    </div>`
