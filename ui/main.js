@@ -2,13 +2,12 @@
 console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
-var articleOneSubmitName=document.getElementById("articleOnebtnSubmit");
-alert(articleOneSubmitName.value);
+var articleSubmitName=document.getElementById("articlebtnSubmit");
 
-articleOneSubmitName.onclick=function(){
-    alert('I am inside articleone submit');
-  var articleOneEleName=document.getElementById("articleOnetxtComment");  
-  var name=articleOneEleName.value;
+
+articleSubmitName.onclick=function(){
+  var articleEleName=document.getElementById("articletxtComment");  
+  var name=articleEleName.value;
   var request=new XMLHttpRequest();
   request.open('GET','http://bamutha76.imad.hasura-app.io/article-one/submit-name?name='+ name,true);
   request.send(null); 
