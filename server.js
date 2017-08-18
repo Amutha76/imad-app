@@ -14,10 +14,10 @@ var articles={
         date : ' August 4, 2017',
         content : `<div>
                       Welcome to Article One. Please enter your commnets!!<p>
-                      <input type="text" id="articleOnetxtComment" size="50" width="500">
-                      <input type="submit" id="articleOnebtnSubmit" width="100">
+                      <input type="text" id="articletxtComment" size="50" width="500">
+                      <input type="submit" id="articlebtnSubmit" width="100">
                       <br/>
-                      <ul id="articleOneUl"></ul>
+                      <ul id="articleUl"></ul>
                    </div>`
          
     },
