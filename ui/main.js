@@ -3,6 +3,7 @@ console.log("I am inside main");
 var button=document.getElementById('btncounter');
 var submitName=document.getElementById("btnsubmitName");
 var articleOneSubmitName=document.getElementById("articleOnebtnSubmit");
+alert(articleOneSubmitName.value);
 
 
 button.onclick=function(){
