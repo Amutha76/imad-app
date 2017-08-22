@@ -55,18 +55,20 @@ app.post('/login',function(req,res){
        if(err){
            res.status(500).send(err.toString());
        }
-       else if (result.rows.length===0){
+       else {
+         if (result.rows.length===0){
            res.status(403).send('Invalid username or Password');
-       } else{
-           var dbString=result.rows[0];
+         } else{
+           var dbString=result.rows[0].password;
            var salt=dbString.split('$')[1];
            var hashedString=hash(password,salt);
-           if (password===hashedString){
+           if (dbString===hashedString){
                res.send('User credentials are correct');
            }else{
                res.status(403).send('Invalid username or Password');
            }
            
+        }
        }
     });
 });
