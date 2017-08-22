@@ -75,8 +75,8 @@ function createTemplate(data){
 var tit=data.title;
 var heading=data.heading;
 //var date=data.date;
-var createdate=new Date();
-var date=createdate.toDateString();
+//var createdate=new Date();
+//var date=createdate.toDateString();
 var content=data.content;
 
 var htmlContent=
@@ -96,7 +96,7 @@ var htmlContent=
                 ${heading}
             </h3>
             <p>
-               ${date}
+               ${date.toDateString()}
             </p>
             <p>
                ${content}        
