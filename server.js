@@ -18,6 +18,7 @@ app.use(morgan('combined'));
 console.log('server.js');
 
 function hash(input,salt){
+    console.log('I am inside hash');
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
     return hashed.toString('hex');
 }
