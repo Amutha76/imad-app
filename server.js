@@ -60,7 +60,7 @@ var articles={
 
 var pool=new Pool(config);
 app.get('/test-db', function(req,res){
-    alert('I am inside function');
+    console.log('I am function');
     // we are going to make a query and return the response on the page
     pool.query('Select * from test',function(err,result){
         if (err){
