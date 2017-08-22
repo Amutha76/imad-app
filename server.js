@@ -14,49 +14,8 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-console.log('server.js')
-var articles={
+console.log('server.js');
 
-    'article-one':{
-        title :'Article One  Amuthalakshmi Balasubramanian',
-        heading:'Article One',
-        date : ' August 4, 2017',
-        content : `<div>
-                      Welcome to Article One. Please enter your commnets!!<p>
-                      <input type="text" id="articletxtComment" size="50" width="500">
-                      <input type="submit" id="articlebtnSubmit" alt="Article-one">
-                      <br/>
-                      <ul id="articleUl"></ul>
-                   </div>`
-         
-    },
-    'article-two':{
-        title :'Article Two  Amuthalakshmi Balasubramanian',
-        heading:'Article Two',
-        date : ' August 6, 2017',
-        content : `<div>
-                      Welcome to Article One. Please enter your commnets!!<p>
-                      <input type="text" id="articletxtComment" size="50" width="500">
-                      <input type="submit" id="articlebtnSubmit" alt="Article-two">
-                      <br/>
-                      <ul id="articleUl"></ul>
-                   </div>`
-               
-    },
-    'article-three':{
-    title :'Article Three  Amuthalakshmi Balasubramanian',
-    heading:'Article Three',
-    date : ' August 8, 2017',
-    content :`<div>
-                      Welcome to Article One. Please enter your commnets!!<p>
-                      <input type="text" id="articletxtComment" size="50" width="500">
-                      <input type="submit" id="articlebtnSubmit" alt="Article-three">
-                      <br/>
-                      <ul id="articleUl"></ul>
-               </div>`
-}
-
-    };
 
 var pool=new Pool(config);
 app.get('/test-db', function(req,res){
