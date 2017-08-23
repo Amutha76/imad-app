@@ -19,7 +19,7 @@ submitLogin.onclick=function(){
      if (request.readyState=== XMLHttpRequest.DONE){
             
             if(request.status==200){
-               alert('User credentials are correct');
+               alert('User successfully logged in');
              } else if (request.status==403){
                  alert('Invalid username and password');
              } else if (request.status==500){
