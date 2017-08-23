@@ -16,7 +16,7 @@ function getArticles(){
               var articleData = JSON.parse(this.responseText);
               var html="<ul>"
               for (i=0; i<articleData.length; i++){
-                  html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date}) </li>1`
+                  html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date.split('T')[0]}) </li>1`
                   
               }
              articleList.innerHTML=html;
