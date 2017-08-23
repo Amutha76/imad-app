@@ -11,7 +11,9 @@ function getArticles(){
     request.onreadystatechange=function(){
   
      if (request.readyState=== XMLHttpRequest.DONE){
-         
+          if (request.status === 200) {
+              var articleData = JSON.parse(this.responseText);
+          }
      }
  
 };
