@@ -3,10 +3,10 @@ console.log("I am inside main");
 
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
+
 var articlerequest=new XMLHttpRequest();
-  articlerequest.open('POST','http://bamutha76.imad.hasura-app.io/login',true);
-  articlerequest.setRequestHeader('Content-Type','application/json');
-  articlerequest.send(JSON.stringify({username:username,password:password}));
+  articlerequest.open('POST','http://bamutha76.imad.hasura-app.io/article-list',true);
+  articlerequest.send(null);
 
 submitLogin.onclick=function(){
   
