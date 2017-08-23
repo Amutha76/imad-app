@@ -52,7 +52,7 @@ app.post('/create-user',function(req,res){
     });
 });
 
-app.post('/article-list',function(req,res){
+app.get('/article-list',function(req,res){
     console.log('I am inside article list');
    pool.query('SELECT title,date FROM article',function(err,result){
    
