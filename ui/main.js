@@ -6,7 +6,7 @@ var submitRegister=document.getElementById("btnsubmitRegister");
 
 function getArticles(){
     var articleList=document.getElementById("articles");
-    var articlerequest=new XMLHttpRequest();
+    var request=new XMLHttpRequest();
     articlerequest.open('GET','/article-list',true);
     articlerequest.send(null); 
     request.onreadystatechange=function(){
