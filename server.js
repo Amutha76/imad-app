@@ -52,6 +52,25 @@ app.post('/create-user',function(req,res){
     });
 });
 
+app.get('/article-list',function(req,res){
+   pool.query('SELECT title,date FROM article',function(err,result){
+   
+   if (err){
+       res.status(500).send(err.toString());
+   } else {
+       if (result.rows.length>0){
+           var html = '<div>';
+           for (var i=0; i<result.rows.length; i++){
+               var ref="http://bamutha76.imad.hasura-app.io/article/" + result.rows[i].title;
+               html = html + '<a href="'+ref+'">' + result.rows[i].title + '</a> (' +  result.rows[i].date.toDateString() + ')';
+           } 
+           req.write(html);
+       }
+   }
+   
+   }); 
+});
+
 app.post('/login',function(req,res){
     var username=req.body.username;
     var password=req.body.password;
