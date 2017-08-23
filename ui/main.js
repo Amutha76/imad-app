@@ -4,9 +4,21 @@ console.log("I am inside main");
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 
-var articlerequest=new XMLHttpRequest();
-  articlerequest.open('GET','http://bamutha76.imad.hasura-app.io/article-list',true);
-  articlerequest.send(null);
+function getArticles(){
+    var articlerequest=new XMLHttpRequest();
+    articlerequest.open('GET','/article-list',true);
+    articlerequest.send(null); 
+    request.onreadystatechange=function(){
+  
+     if (request.readyState=== XMLHttpRequest.DONE){
+         
+     }
+ 
+};
+    
+}
+
+
 
 submitLogin.onclick=function(){
   
