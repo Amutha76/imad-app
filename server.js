@@ -53,6 +53,7 @@ app.post('/create-user',function(req,res){
 });
 
 app.post('/article-list',function(req,res){
+    console.log('I am inside article list');
    pool.query('SELECT title,date FROM article',function(err,result){
    
    if (err){
@@ -64,6 +65,7 @@ app.post('/article-list',function(req,res){
                var ref="http://bamutha76.imad.hasura-app.io/article/" + result.rows[i].title;
                html = html + '<a href="'+ref+'">' + result.rows[i].title + '</a> (' +  result.rows[i].date.toDateString() + ')';
            } 
+           console.log(html);
            req.write(html);
        }
    }
