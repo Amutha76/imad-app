@@ -1,10 +1,10 @@
 
 console.log("I am inside main");
 
-var submitName=document.getElementById("btnsubmitLogin");
+var submitLogin=document.getElementById("btnsubmitLogin");
 var submitName=document.getElementById("btnsubmitRegister");
 
-submitName.onclick=function(){
+submitLogin.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
   var password=document.getElementById("pwdPassword").value;
