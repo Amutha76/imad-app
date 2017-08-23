@@ -5,7 +5,7 @@ var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 
 function getArticles(){
-    var articleList=document.getElementById("btnsubmitRegister");
+    var articleList=document.getElementById("articles");
     var articlerequest=new XMLHttpRequest();
     articlerequest.open('GET','/article-list',true);
     articlerequest.send(null); 
