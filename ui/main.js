@@ -5,7 +5,7 @@ var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 
 var articlerequest=new XMLHttpRequest();
-  articlerequest.open('POST','http://bamutha76.imad.hasura-app.io/article-list',true);
+  articlerequest.open('GET','http://bamutha76.imad.hasura-app.io/article-list',true);
   articlerequest.send(null);
 
 submitLogin.onclick=function(){
