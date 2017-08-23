@@ -2,7 +2,7 @@
 console.log("I am inside main");
 
 var submitLogin=document.getElementById("btnsubmitLogin");
-var submitName=document.getElementById("btnsubmitRegister");
+var submitRegister=document.getElementById("btnsubmitRegister");
 
 submitLogin.onclick=function(){
   
@@ -30,7 +30,7 @@ submitLogin.onclick=function(){
 
 };
 
-submitLogin.onclick=function(){
+submitRegister.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
   var password=document.getElementById("pwdPassword").value;
