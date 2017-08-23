@@ -1,8 +1,8 @@
 
 console.log("I am inside main");
 
-var submitName=document.getElementById("btnsubmitName");
-
+var submitName=document.getElementById("btnsubmitLogin");
+var submitName=document.getElementById("btnsubmitRegister");
 
 submitName.onclick=function(){
   
