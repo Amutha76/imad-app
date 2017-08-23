@@ -7,8 +7,8 @@ var submitRegister=document.getElementById("btnsubmitRegister");
 function getArticles(){
     var articleList=document.getElementById("articles");
     var request=new XMLHttpRequest();
-    articlerequest.open('GET','/article-list',true);
-    articlerequest.send(null); 
+    request.open('GET','/article-list',true);
+    request.send(null); 
     request.onreadystatechange=function(){
   
      if (request.readyState=== XMLHttpRequest.DONE){
