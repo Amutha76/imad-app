@@ -5,6 +5,7 @@ var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 
 function getArticles(){
+    var articleList=document.getElementById("btnsubmitRegister");
     var articlerequest=new XMLHttpRequest();
     articlerequest.open('GET','/article-list',true);
     articlerequest.send(null); 
@@ -13,7 +14,15 @@ function getArticles(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               var articleData = JSON.parse(this.responseText);
+              var html="<ul>"
+              for (i=0; i<articleData.length; i++){
+                  html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date.toDateString()}) </li>1`
+                  
+              }
+          
+              
           }
+          
      }
  
 };
