@@ -5,7 +5,7 @@ var submitName=document.getElementById("btnsubmitName");
 
 
 submitName.onclick=function(){
-    alert('I am inside onclick');
+  
   var username=document.getElementById("txtName").value;  
   var password=document.getElementById("pwdPassword").value;
  
