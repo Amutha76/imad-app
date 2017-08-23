@@ -19,7 +19,7 @@ function getArticles(){
                   html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date.toDateString()}) </li>1`
                   
               }
-          
+             articleList.innerHTML=html;
               
           }
           
@@ -83,4 +83,4 @@ submitRegister.onclick=function(){
 
 };
 
-
+getArticles();
