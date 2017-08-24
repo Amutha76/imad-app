@@ -3,9 +3,10 @@ console.log("I am inside main");
 //var currentArticleTitle = window.location.pathname.split('/')[2];
 var ArticleTitle = window.location.pathname.split('/');
 if (ArticleTitle.length>1){
+    var currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
 }else {
-    var currentArticleTitle = window.location.pathname.split('/')[2];
+   
     getArticles();
 }
 
