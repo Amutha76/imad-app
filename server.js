@@ -118,6 +118,7 @@ app.get('/test-db', function(req,res){
     });
 });
 
+
 //var title='Amutha home page';
 function createTemplate(data){
 var tit=data.title;
@@ -210,6 +211,9 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+app.post('',function(req,res){
+    
+})
 app.get('/articles/:articleName', function(req,res){
     var articleName = req.params.articleName;
     pool.query("select * from article where title= $1 ", [articleName] , function(err,result){
