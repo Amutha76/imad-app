@@ -1,12 +1,14 @@
 //var currentArticleTitle = window.location.pathname.split('/')[2];
 console.log("I am inside main");
 alert('I am  testing window location' + window.location.pathname );
-
+var currentArticleTitle='';
 var ArticleTitle = window.location.pathname.split('/');
 alert(ArticleTitle.length + window.location.pathname);
-//if (ArticleTitle.length>2){
-    //var currentArticleTitle = window.location.pathname.ssting wiplit('/')[2];
-   // getcomments();
+
+if (ArticleTitle.length>2){
+    currentArticleTitle = window.location.pathname.split('/')[2];
+    getcomments();
+}
 //}else {
    
     //getArticles();
@@ -26,8 +28,8 @@ articleList.onclick=function(){
 
 function getcomments()
 {
-   var currentArticleTitle = window.location.pathname.split('/')[1];
-    alert('I am inside getcomments' + window.location.pathname );
+  // var currentArticleTitle = window.location.pathname.split('/')[1];
+    alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     request.open('POST','/getcomments/'+currentArticleTitle,true);
     request.setRequestHeader('Content-Type','application/json');
