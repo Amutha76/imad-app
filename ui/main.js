@@ -69,7 +69,7 @@ function getArticles(){
 }
 
 
-
+if (submitLogin !== null){
 submitLogin.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
@@ -95,7 +95,7 @@ submitLogin.onclick=function(){
     };
 
 };
-
+}
 submitRegister.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
