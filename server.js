@@ -153,7 +153,7 @@ var htmlContent=
             </div>
             <div id="displaycomment"></div>
             
-            <script type="text/javascript" src="/ui/main.js">
+            <script type="text/javascript" src="/ui/article.js">
             </script>
     </body>
 </html>`;
