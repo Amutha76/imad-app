@@ -1,10 +1,10 @@
 //var currentArticleTitle = window.location.pathname.split('/')[2];
 console.log("I am inside main");
-
+alert('I am  testing window location' + window.location.pathname );
 var ArticleTitle = window.location.pathname.split('/');
 //alert(ArticleTitle.length + window.location.pathname);
 //if (ArticleTitle.length>2){
-    //var currentArticleTitle = window.location.pathname.split('/')[2];
+    //var currentArticleTitle = window.location.pathname.ssting wiplit('/')[2];
    // getcomments();
 //}else {
    
