@@ -3,13 +3,13 @@ console.log("I am inside main");
 var currentArticleTitle = window.location.pathname.split('/')[2];
 var ArticleTitle = window.location.pathname.split('/');
 alert(ArticleTitle.length + window.location.pathname);
-if (ArticleTitle.length>2){
-    var currentArticleTitle = window.location.pathname.split('/')[2];
-    getcomments();
-}else {
+//if (ArticleTitle.length>2){
+    //var currentArticleTitle = window.location.pathname.split('/')[2];
+   // getcomments();
+//}else {
    
-    getArticles();
-}
+    //getArticles();
+//}
 
 
 var displaycomments = document.getElementById('displaycomment');
@@ -124,4 +124,4 @@ submitRegister.onclick=function(){
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
 getArticles();
-//getcomments();
+getcomments();
