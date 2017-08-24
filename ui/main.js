@@ -119,5 +119,8 @@ submitRegister.onclick=function(){
     };
 
 };
-
+ 
+var currentArticleTitle = window.location.pathname.split('/')[2];
+    
 getArticles();
+getcomments();
