@@ -17,8 +17,11 @@ var entercomments = document.getElementById('entercomment');
 
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
+var articleList=document.getElementById("articles");
 
-
+articleList.onclick=function(){
+    getcomments();
+};
 
 function getcomments()
 {
