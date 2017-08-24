@@ -146,7 +146,9 @@ var htmlContent=
             <p>
                ${content}        
             </p>
-            <div id="content"></div>
+            <div id="entercomment"></div>
+            <div id="displaycomment"></div>
+            
             <script type="text/javascript" src="/ui/main.js">
             </script>
     </body>
