@@ -26,7 +26,7 @@ articleList.onclick=function(){
 function getcomments()
 {
    var currentArticleTitle = window.location.pathname.split('/')[2];
-    alert('I am inside getcomments' + currentArticleTitle );
+    alert('I am inside getcomments' + window.location.pathname );
     var request=new XMLHttpRequest();
     request.open('POST','/getcomments/'+currentArticleTitle,true);
     request.setRequestHeader('Content-Type','application/json');
