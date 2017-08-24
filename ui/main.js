@@ -1,6 +1,6 @@
 
 console.log("I am inside main");
-var currentArticleTitle = window.location.pathname.split('/')[2];
+
 var ArticleTitle = window.location.pathname.split('/');
 //alert(ArticleTitle.length + window.location.pathname);
 //if (ArticleTitle.length>2){
@@ -25,6 +25,7 @@ articleList.onclick=function(){
 
 function getcomments()
 {
+   var currentArticleTitle = window.location.pathname.split('/')[2];
     alert('I am inside getcomments');
     var request=new XMLHttpRequest();
     request.open('POST','/getcomments/'+currentArticleTitle,true);
@@ -145,4 +146,4 @@ getArticles();
 //        alert('Not ready');
 //    }
 //}
-getcomments();
+//getcomments();
