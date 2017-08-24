@@ -211,7 +211,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/getcomments/:articleTitle',function(req,res){
+app.post('/getcomments/:articleTitle',function(req,res){
     var articleTitle=req.params.articleTitle;
     console.log('Inside getcomments');
     console.log(articleTitle);
