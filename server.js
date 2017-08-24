@@ -212,8 +212,8 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.post('/getcomments/:articleTitle',function(req,res){
-    var articleTitle=req.params.articleTitle;
-    console.log('Inside getcomments');
+    var articleTitle=req.body.username;
+    console.log('Inside get-comments');
     console.log(articleTitle);
     //var auth_id=req.session.auth.auth_id;
     pool.query("select comment, comment.date from article, comment where comment.article_id=article.id and article.title =$1", [articleTitle] , function(err,result){
