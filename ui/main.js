@@ -24,10 +24,10 @@ function getcomments()
 {
     alert('I am inside getcomments');
     var request=new XMLHttpRequest();
-    request.open('GET','/getcomments/'+currentArticleTitle,true);
-    //request.setRequestHeader('Content-Type','application/json');
-    //request.send(JSON.stringify({articletitle:currentArticleTitle}));
-    request.send(null);
+    request.open('POST','/getcomments/'+currentArticleTitle,true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({articletitle:currentArticleTitle}));
+    //request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
