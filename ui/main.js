@@ -3,7 +3,7 @@ console.log("I am inside main");
 //var currentArticleTitle = window.location.pathname.split('/')[2];
 var ArticleTitle = window.location.pathname.split('/');
 alert(ArticleTitle.length + window.location.pathname);
-if (ArticleTitle.length>1){
+if (ArticleTitle.length>2){
     var currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
 }else {
