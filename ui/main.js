@@ -1,5 +1,9 @@
 
 console.log("I am inside main");
+var currentArticleTitle = window.location.pathname.split('/')[2];
+
+var displaycomments = document.getElementById('displaycomment');
+var entercomments = document.getElementById('entercomment');
 
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
