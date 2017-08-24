@@ -1,14 +1,7 @@
 var currentArticleTitle = window.location.pathname.split('/')[2];
-var comments = document.getElementById('comments');
-var comments = document.getElementById('comments');
+var displaycomments = document.getElementById('displaycomment');
+var entercomments = document.getElementById('entercomment');
 
-function onLoadcommentForm()
-{
-    
-    var request=new XMLHttpRequest();
-    request.open('GET','/article-list',true);
-    request.send(null); 
-};
 
 function getcomments()
 {
@@ -20,11 +13,18 @@ function getcomments()
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                
+                var commentsData = JSON.parse(this.responseText);
+                var commentshtml='';
+                for (i=0;i<commentsData.length;i++){
+                    commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
+                }
+                displaycomments.innerHTML=commentsData;
+            }else{
+              displaycomments.innerHTML='No comments for this article';    
             }
         }
          
-     }
+     };
 }
 
-onlLoadForm();
+ getcomments();
