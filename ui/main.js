@@ -20,9 +20,9 @@ var submitRegister=document.getElementById("btnsubmitRegister");
 function getcomments()
 {
     var request=new XMLHttpRequest();
-    request.open('POST','/getcomments/'+currentArticleTitle,true);
-    request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({articletitle:currentArticleTitle}));
+    request.open('GET','/getcomments/'+currentArticleTitle,true);
+    //request.setRequestHeader('Content-Type','application/json');
+    //request.send(JSON.stringify({articletitle:currentArticleTitle}));
     
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
