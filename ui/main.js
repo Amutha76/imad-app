@@ -1,4 +1,4 @@
-
+var currentArticleTitle = window.location.pathname.split('/')[2];
 console.log("I am inside main");
 
 var ArticleTitle = window.location.pathname.split('/');
