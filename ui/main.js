@@ -18,6 +18,19 @@ var entercomments = document.getElementById('entercomment');
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 
+request.onreadystatechange=function(){
+    if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                alert('I am ready');
+                if (ArticleTitle.length>2){
+                 alert('I am going to get comments');
+                 getcomments();
+                }
+            }
+        
+    }
+}
+
 function getcomments()
 {
     alert('I am inside getcomments');
