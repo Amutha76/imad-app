@@ -211,8 +211,19 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.post('',function(req,res){
-    
+app.post('/getcomments/:articleTitle',function(req,res){
+    var articleTitle=req.params.articleTitle;
+    var auth_id=req.session.auth.auth_id;
+    pool.query("select comment, comment.date from article, comment where comment.article_id=article.id and article.title =$1 and comment.auth_id=$2", [articleTitle,auth_id] , function(err,result){
+        if(err){
+           res.status(500).send(err.toString());     
+        }else if(result.rows.length===0){
+           res.status(404).send("Article Not Found");    
+        }
+        else{
+           res.send(JSON.stringify(result.rows));
+        }
+    });
 })
 app.get('/articles/:articleName', function(req,res){
     var articleName = req.params.articleName;
