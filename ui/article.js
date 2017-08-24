@@ -1,7 +1,7 @@
 var currentArticleTitle = window.location.pathname.split('/')[2];
 var displaycomments = document.getElementById('displaycomment');
 var entercomments = document.getElementById('entercomment');
-
+alert('I am in article.js');
 
 function getcomments()
 {
