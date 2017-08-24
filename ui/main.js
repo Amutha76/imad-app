@@ -138,6 +138,8 @@ request.onreadystatechange=function(){
                 }
             }
         
+    }else{
+        alert('Not ready');
     }
 }
 getcomments();
