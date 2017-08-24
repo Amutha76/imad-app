@@ -2,6 +2,7 @@
 console.log("I am inside main");
 //var currentArticleTitle = window.location.pathname.split('/')[2];
 var ArticleTitle = window.location.pathname.split('/');
+alert(ArticleTitle.length);
 if (ArticleTitle.length>1){
     var currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
@@ -120,7 +121,7 @@ submitRegister.onclick=function(){
 
 };
  
-var currentArticleTitle = window.location.pathname.split('/')[2];
+//var currentArticleTitle = window.location.pathname.split('/')[2];
     
-getArticles();
-getcomments();
+//getArticles();
+//getcomments();
