@@ -1,4 +1,4 @@
-var currentArticleTitle = window.location.pathname.split('/')[2];
+//var currentArticleTitle = window.location.pathname.split('/')[2];
 console.log("I am inside main");
 
 var ArticleTitle = window.location.pathname.split('/');
@@ -26,7 +26,7 @@ articleList.onclick=function(){
 function getcomments()
 {
    var currentArticleTitle = window.location.pathname.split('/')[2];
-    alert('I am inside getcomments');
+    alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     request.open('POST','/getcomments/'+currentArticleTitle,true);
     request.setRequestHeader('Content-Type','application/json');
