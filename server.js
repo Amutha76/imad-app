@@ -121,7 +121,6 @@ app.get('/test-db', function(req,res){
 //var title='Amutha home page';
 function createTemplate(data){
 var tit=data.title;
-var heading=data.heading;
 var date=data.date;
 //var date=data.date;
 //var createdate=new Date();
@@ -141,15 +140,13 @@ var htmlContent=
                 <a href="/">Home</a>
                 <hr>
             </div>
-            <h3>
-                ${heading}
-            </h3>
             <p>
                ${date.toDateString()}
             </p>
             <p>
                ${content}        
             </p>
+            <div id="content"></div>
             <script type="text/javascript" src="/ui/main.js">
             </script>
     </body>
