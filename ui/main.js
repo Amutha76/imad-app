@@ -1,6 +1,14 @@
 
 console.log("I am inside main");
-var currentArticleTitle = window.location.pathname.split('/')[2];
+//var currentArticleTitle = window.location.pathname.split('/')[2];
+var ArticleTitle = window.location.pathname.split('/');
+if (ArticleTitle.length>1){
+    getcomments();
+}else {
+    var currentArticleTitle = window.location.pathname.split('/')[2]
+    getArticles();
+}
+
 
 var displaycomments = document.getElementById('displaycomment');
 var entercomments = document.getElementById('entercomment');
