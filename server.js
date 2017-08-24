@@ -146,7 +146,10 @@ var htmlContent=
             <p>
                ${content}        
             </p>
-            <div id="entercomment"></div>
+            <div id="entercomment">
+            <textarea id="txtcomment" rows="5" cols="100" placeholder="Enter your comments here"></textarea><p>
+            <input type="submit" id="btnsubmit"></input>
+            </div>
             <div id="displaycomment"></div>
             
             <script type="text/javascript" src="/ui/main.js">
