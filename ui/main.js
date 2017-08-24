@@ -20,7 +20,7 @@ var submitRegister=document.getElementById("btnsubmitRegister");
 
 function getcomments()
 {
-   // alert('I am inside getcomments');
+    alert('I am inside getcomments');
     var request=new XMLHttpRequest();
     request.open('GET','/getcomments/'+currentArticleTitle,true);
     //request.setRequestHeader('Content-Type','application/json');
@@ -44,6 +44,7 @@ function getcomments()
 }
 
 function getArticles(){
+    
     var articleList=document.getElementById("articles");
     var request=new XMLHttpRequest();
     request.open('GET','/article-list',true);
