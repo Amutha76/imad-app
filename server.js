@@ -212,7 +212,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.post('/getcomments/:articleTitle',function(req,res){
-    var articleTitle=req.body.articletitle;
+    var articleTitle=req.body.currentArticleTitle;
     console.log('Inside get-comments');
     console.log(articleTitle);
     //var auth_id=req.session.auth.auth_id;
