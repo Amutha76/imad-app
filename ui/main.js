@@ -22,10 +22,6 @@ var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
 
-articleList.onclick=function(){
-    getcomments();
-};
-
 function getcomments()
 {
   // var currentArticleTitle = window.location.pathname.split('/')[1];
