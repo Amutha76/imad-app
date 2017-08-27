@@ -33,9 +33,9 @@ function getcomments()
     var checklogin=loadlogin();
     alert('Check Login value is ' + checklogin );
     if(checklogin=='logout'){
-        txtcomment.style.visibility = "hidden";
+        entercomments.style.visibility = "hidden";
     }else{
-         txtcomment.style.visibility = "visible";
+         entercomments.style.visibility = "visible";
     }
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
