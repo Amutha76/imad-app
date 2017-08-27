@@ -11,7 +11,7 @@ var txtcomment=document.getElementById("txtcomment");
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
-var checklogin='';
+var checklogin='logout';
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
@@ -75,11 +75,11 @@ function loadlogin(){
   
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-            // alert('you are logged in');
-             checklogin='login';
+              checklogin='login';
+               alert('you are logged in ' + checklogin );
             }else{
               checklogin='logout';    
-             // alert('you are logged out');
+              alert('you are logged out ' + checklogin);
             }
           
      }
