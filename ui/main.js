@@ -11,7 +11,12 @@ var txtcomment=document.getElementById("txtcomment");
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
-var checklogin=false;
+var submitcomment=document.getElementById("btnsubmitcomment");
+
+//var checklogin=false;
+
+
+
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
