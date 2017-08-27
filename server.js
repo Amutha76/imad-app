@@ -220,9 +220,11 @@ app.post('/getcomments',function(req,res){
         if(err){
            res.status(500).send(err.toString());     
         }else if(result.rows.length===0){
+           console.log('No rows are selected')        
            res.status(404).send("Article Not Found");    
         }
         else{
+            console.log('Number of rows ' + result.rows.count)
            res.send(JSON.stringify(result.rows));
         }
     });
