@@ -96,7 +96,7 @@ app.post('/insertcomment/:articleTitle',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
         console.log('inserting article title' + req.params.articleTitle);
         console.log('author id :'+ req.session.auth.userId);
-        pool.query('select id from article where title=$1 and author_id=$2',[req.params.articleTitle,req.session.auth.userId],function(err,result){
+        pool.query('select id from article where title=$1',[req.params.articleTitle],function(err,result){
             if (err){
                 res.status(500).send(err.toString());
             }else{
