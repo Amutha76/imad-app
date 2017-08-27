@@ -33,18 +33,15 @@ function getcomments()
     //request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-             //alert('ready status : '+request.status);
+            
             if (request.status === 200) {
-                //alert('I am inside readystate ');
                 var commentsData = JSON.parse(this.responseText);
                 var commentsrows=commentsData.length;
-                alert('Number of rows are ' + commentsrows);
                 var commentshtml='';
                 for (var i=0; i<commentsrows; i++){
-                    alert('jj');
-                    commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
+                    commentsData+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on ${commentsData[i].date.toLocaleDateString()}</div><p>`;
                 }
-                alert('comments ' + commentsData)
+                alert('comments ' + commentsData);
                 displaycomments.innerHTML=commentsData;
             }else{
               displaycomments.innerHTML='No comments for this article';    
@@ -65,9 +62,9 @@ function getArticles(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               var articleData = JSON.parse(this.responseText);
-              var html="<ul>"
+              var html="<ul>";
               for (i=0; i<articleData.length; i++){
-                  html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date.split('T')[0]}) </li>`
+                  html += `<li> <a href="/articles/${articleData[i].title}"> ${articleData[i].title} </a> ( ${articleData[i].date.split('T')[0]}) </li>`;
                   
               }
              articleList.innerHTML=html;
