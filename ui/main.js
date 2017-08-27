@@ -166,7 +166,7 @@ submitLogin.onclick=function(){
   
   var request=new XMLHttpRequest();
   
-      request.open('POST','/insertcomment',true);
+      request.open('POST','/insertcomment/'+currentArticleTitle,true);
       request.setRequestHeader('Content-Type','application/json');
       request.send(JSON.stringify({comment:comment})); 
      
