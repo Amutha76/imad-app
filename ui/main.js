@@ -133,14 +133,69 @@ function getArticles(){
     
 }
 
-
-submitLogin.onclick=function(){
+if(submitLogin !==null){
+    submitLogin.onclick=function(){
+      
+      var username=document.getElementById("txtName").value;  
+      var password=document.getElementById("pwdPassword").value;
+      var request=new XMLHttpRequest();
+      
+          request.open('POST','/login',true);
+          request.setRequestHeader('Content-Type','application/json');
+          request.send(JSON.stringify({username:username,password:password})); 
+         
+          request.onreadystatechange=function(){
+          
+             if (request.readyState=== XMLHttpRequest.DONE){
+                    
+                    if(request.status==200){
+                      // alert('User successfully logged in');
+                       logoutvisible();
+                     } else if (request.status==403){
+                         alert('Invalid username and password');
+                     } else if (request.status==500){
+                         alert('Internal server error');
+                     }
+                }
+            };
+      };
+}
   
-  var username=document.getElementById("txtName").value;  
-  var password=document.getElementById("pwdPassword").value;
-  var request=new XMLHttpRequest();
+  if(submitcomment !==null){
+      submitcomment.onclick=function(){
+      
+      var comment=document.getElementById("txtcomment").value;  
+      
+      var request=new XMLHttpRequest();
+      
+          request.open('POST','/insertcomment/'+currentArticleTitle,true);
+          request.setRequestHeader('Content-Type','application/json');
+          request.send(JSON.stringify({comment:comment})); 
+         
+          request.onreadystatechange=function(){
+          
+             if (request.readyState=== XMLHttpRequest.DONE){
+                    
+                    if(request.status==200){
+                      // alert('User successfully logged in');
+                       comment.innerHTML='';
+                       loadcomment();
+                     } else {
+                         alert('Cannot insert comment');
+                     }
+                }
+            };
+      };
+  }
   
-      request.open('POST','/login',true);
+ if(submitRegister !==null){ 
+    submitRegister.onclick=function(){
+      
+      var username=document.getElementById("txtName").value;  
+      var password=document.getElementById("pwdPassword").value;
+     
+      var request=new XMLHttpRequest();
+      request.open('POST','/create-user',true);
       request.setRequestHeader('Content-Type','application/json');
       request.send(JSON.stringify({username:username,password:password})); 
      
@@ -149,68 +204,17 @@ submitLogin.onclick=function(){
          if (request.readyState=== XMLHttpRequest.DONE){
                 
                 if(request.status==200){
-                  // alert('User successfully logged in');
-                   logoutvisible();
+                   alert('User successfully created');
                  } else if (request.status==403){
-                     alert('Invalid username and password');
+                     alert('Cannot create user');
                  } else if (request.status==500){
                      alert('Internal server error');
                  }
             }
         };
-  };
-  
-  submitcomment.onclick=function(){
-  
-  var comment=document.getElementById("txtcomment").value;  
-  
-  var request=new XMLHttpRequest();
-  
-      request.open('POST','/insertcomment/'+currentArticleTitle,true);
-      request.setRequestHeader('Content-Type','application/json');
-      request.send(JSON.stringify({comment:comment})); 
-     
-      request.onreadystatechange=function(){
-      
-         if (request.readyState=== XMLHttpRequest.DONE){
-                
-                if(request.status==200){
-                  // alert('User successfully logged in');
-                   comment.innerHTML='';
-                   loadcomment();
-                 } else {
-                     alert('Cannot insert comment');
-                 }
-            }
-        };
-  };
-  
-submitRegister.onclick=function(){
-  
-  var username=document.getElementById("txtName").value;  
-  var password=document.getElementById("pwdPassword").value;
- 
-  var request=new XMLHttpRequest();
-  request.open('POST','/create-user',true);
-  request.setRequestHeader('Content-Type','application/json');
-  request.send(JSON.stringify({username:username,password:password})); 
- 
-  request.onreadystatechange=function(){
-  
-     if (request.readyState=== XMLHttpRequest.DONE){
-            
-            if(request.status==200){
-               alert('User successfully created');
-             } else if (request.status==403){
-                 alert('Cannot create user');
-             } else if (request.status==500){
-                 alert('Internal server error');
-             }
-        }
+    
     };
-
-};
- 
+ } 
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
 function togglecommenton(){
