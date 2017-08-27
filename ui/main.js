@@ -86,7 +86,7 @@ function loadcomment(){
    // alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-            alert('load login is true');
+           // alert('load login is true');
            togglecommenton() ;
             }else{
             
