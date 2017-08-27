@@ -92,7 +92,7 @@ app.post('/login',function(req,res){
     });
 });
 
-app.get('/check-login',function(req,res){
+app.post('/check-login',function(req,res){
     var checklogin='logout';
     if(req.session && req.session.auth && req.session.auth.userId){
         checklogin='login';
@@ -101,6 +101,7 @@ app.get('/check-login',function(req,res){
         checklogin='logout';
         // res.send('You are not logged in');
      }
+     console.log(checklogin);
      res.send(JSON.stringify(checklogin));
 });
 
