@@ -46,7 +46,7 @@ function getcomments()
     //}else{
     //     entercomments.style.visibility = "visible";
 //    }
-    loadlogin();
+    loadcomment();
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
@@ -76,7 +76,7 @@ function getcomments()
 }
 
 
-function loadlogin(){
+function loadcomment(){
    // var rtnloginval='logout';
     var request=new XMLHttpRequest();
     request.open('GET','/check-login',true);
@@ -211,6 +211,29 @@ function togglecommentoff(){
 var entercomments = document.getElementById('entercomment');    
       entercomments.style.visibility = "hidden";
 }
-    
+
+function loadlogin(){
+   // var rtnloginval='logout';
+    var request=new XMLHttpRequest();
+    request.open('GET','/check-login',true);
+    request.send(null); 
+    request.onreadystatechange=function(){
+    var checklogin = this.responseText;
+   // alert('I am inside loadlogin ' + checklogin );
+     if (request.readyState=== XMLHttpRequest.DONE){
+          if (request.status === 200) {
+            alert('load login is true');
+           togglecommenton() ;
+            }else{
+            
+            togglecommentoff();  
+              
+            }
+     }else{
+           togglecommentoff();
+     }
+ };
+
+}    
 
 getArticles();
