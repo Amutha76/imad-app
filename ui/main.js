@@ -192,7 +192,7 @@ if(submitLogin !==null){
       submitcomment.onclick=function(){
       
       var request=new XMLHttpRequest();
-      
+          alert('looogggiinngg oouutt');
           request.open('GET','/logout',true);
           request.setRequestHeader('Content-Type','application/json');
          
