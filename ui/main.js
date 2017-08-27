@@ -40,9 +40,9 @@ function getcomments()
   // var currentArticleTitle = window.location.pathname.split('/')[1];
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
-    var checklogin=loadlogin();
-    alert('Check Login value is ' + checklogin );
-    if(checklogin !==true){
+   // var checklogin=loadlogin();
+    //alert('Check Login value is ' + checklogin );
+    if(loadlogin() !==true){
         entercomments.style.visibility = "hidden";
     }else{
          entercomments.style.visibility = "visible";
@@ -82,8 +82,8 @@ function loadlogin(){
     request.open('GET','/check-login',true);
     request.send(null); 
     request.onreadystatechange=function(){
-   // var checklogin = this.responseText;
-    //alert('I am inside loadlogin ' + checklogin );
+    var checklogin = this.responseText;
+    alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
             return true ;
