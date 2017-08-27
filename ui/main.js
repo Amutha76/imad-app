@@ -203,8 +203,8 @@ submitRegister.onclick=function(){
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
 function togglecommenton(){
-var entercomments = document.getElementById('entercomment');    
-     entercomments.style.visibility = "visible";
+    var entercomments = document.getElementById('entercomment');    
+    entercomments.style.visibility = "visible";
 }    
 
 function togglecommentoff(){
