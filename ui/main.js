@@ -73,10 +73,11 @@ function loadlogin(){
     request.send(null); 
     request.onreadystatechange=function(){
     var checklogin = JSON.parse(this.responseText);
+    alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               rtnloginval='login';
-              // alert('you are logged in ' + checklogin );
+               alert('you are logged in ' + checklogin );
             }else{
               rtnloginval='logout';    
               //alert('you are logged out ' + checklogin);
