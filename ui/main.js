@@ -19,6 +19,8 @@ if (ArticleTitle.length>2){
 }
 else{
     checklogin=loadlogin();
+    alert('testing checklogin 1' +checklogin );
+    alert('testing checklogin 2' +checklogin.value );
     if(checklogin=='logout'){
         submitLogin.value="Login";
     }else{
