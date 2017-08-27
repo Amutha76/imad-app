@@ -87,17 +87,16 @@ function loadlogin(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               rtnloginval='login';
-              alert('I am about to return ' + checklogin);
-              return rtnloginval;
+              
             }else{
               rtnloginval='logout';  
-              alert('I am about to return ' + checklogin);
-              return rtnloginval;
-             
+              
             }
+     }else{
+          rtnloginval='logout';  
      }
  };
-
+return rtnloginval;
 }
 
 function getArticles(){
