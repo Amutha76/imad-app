@@ -30,9 +30,9 @@ function getcomments()
   // var currentArticleTitle = window.location.pathname.split('/')[1];
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
-    loadlogin();
+    var checklogin=loadlogin();
     alert('Check Login value is ' + checklogin );
-    if(checklogin=='login'){
+    if(checklogin=='logout'){
         txtcomment.style.visibility = "hidden";
     }else{
          txtcomment.style.visibility = "visible";
@@ -67,7 +67,7 @@ function getcomments()
 
 
 function loadlogin(){
- 
+    var rtnloginval='logout';
     var request=new XMLHttpRequest();
     request.open('GET','/check-login',true);
     request.send(null); 
@@ -75,16 +75,15 @@ function loadlogin(){
     var checklogin = JSON.parse(this.responseText);
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-              //checklogin='login';
-               alert('you are logged in ' + checklogin );
+              rtnloginval='login';
+              // alert('you are logged in ' + checklogin );
             }else{
-            //  checklogin='logout';    
-              alert('you are logged out ' + checklogin);
+              rtnloginval='logout';    
+              //alert('you are logged out ' + checklogin);
             }
-          
      }
  };
- return checklogin;
+ return rtnloginval;
 }
 
 function getArticles(){
