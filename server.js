@@ -94,15 +94,25 @@ app.post('/login',function(req,res){
 
 app.get('/check-login',function(req,res){
    // var checklogin='logout';
+
     if(req.session && req.session.auth && req.session.auth.userId){
-        checklogin='login';
-        //res.send('You are logged in successfully as ' + req.session.auth.userId.toString());
+       pool.query('SELECT * FROM "user" WHERE id=$1', [req.session.auth.userId],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else {
+               if (result.rows.length===0){
+                 res.status(403).send('Invalid username or Password');
+             } else{
+                 res.send(result.rows[0].username);
+             }
+            }
+        });
+        
      }else{
-        checklogin='logout';
-        // res.send('You are not logged in');
+        res.status(400).send('You are not logged in');
      }
-     console.log(checklogin);
-     res.send(JSON.stringify(checklogin));
+    
 });
 
 
