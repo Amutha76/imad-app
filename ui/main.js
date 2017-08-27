@@ -82,7 +82,7 @@ function loadlogin(){
     request.open('GET','/check-login',true);
     request.send(null); 
     request.onreadystatechange=function(){
-    var checklogin = JSON.parse(this.responseText);
+    var checklogin = this.responseText;
     alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
