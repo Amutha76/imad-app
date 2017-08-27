@@ -82,22 +82,21 @@ function loadlogin(){
     request.open('GET','/check-login',true);
     request.send(null); 
     request.onreadystatechange=function(){
-    var checklogin = this.responseText;
-    alert('I am inside loadlogin ' + checklogin );
+   // var checklogin = this.responseText;
+    //alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-             return checklogin;
-             // rtnloginval='login';
-              
+            return true ;
             }else{
-              rtnloginval='logout';  
+            
+            return false;  
               
             }
      }else{
-          rtnloginval='logout';  
+          return false;
      }
  };
-return rtnloginval;
+
 }
 
 function getArticles(){
