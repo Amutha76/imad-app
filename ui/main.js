@@ -31,6 +31,7 @@ function getcomments()
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     loadlogin();
+    alert('Check Login value is ' + checklogin );
     if(checklogin=='login'){
         txtcomment.style.visibility = "hidden";
     }else{
