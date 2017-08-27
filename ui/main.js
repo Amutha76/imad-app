@@ -190,6 +190,7 @@ if(submitLogin !==null){
   
   if(submitlogout !==null){
       submitcomment.onclick=function(){
+    alert('i am logout button');      
       
       var request=new XMLHttpRequest();
           request.open('GET','/logout',true);
