@@ -38,6 +38,7 @@ function getcomments()
     {
         alert('you are logged out');
     }
+    
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             
