@@ -93,13 +93,17 @@ app.post('/login',function(req,res){
 });
 
 app.get('/check-login',function(req,res){
+    var checklogin='logout';
     if(req.session && req.session.auth && req.session.auth.userId){
-        res.send('You are logged in successfully as ' + req.session.auth.userId.toString());
+        checklogin='login';
+        //res.send('You are logged in successfully as ' + req.session.auth.userId.toString());
      }else{
-         res.send('You are not logged in');
+        checklogin='logout';
+        // res.send('You are not logged in');
      }
-     
+     res.send(JSON.stringify(checklogin));
 });
+
 
 app.get('/logout',function(req,res){
     delete req.session.auth;
