@@ -5,8 +5,21 @@ var currentArticleTitle='';
 var ArticleTitle = window.location.pathname.split('/');
 //alert(ArticleTitle.length + window.location.pathname);
 
+var displaycomments = document.getElementById('displaycomment');
+var entercomments = document.getElementById('entercomment');
+var txtcomment=document.getElementById("txtcomment");
+var submitLogin=document.getElementById("btnsubmitLogin");
+var submitRegister=document.getElementById("btnsubmitRegister");
+var articleList=document.getElementById("articles");
+
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
+    if(submitLogin.value=='Login'){
+        txtcomment.style.visibility = "hidden";
+    }else{
+         txtcomment.style.visibility = "visible";
+    }
+      
     getcomments();
 }
 //}else {
@@ -15,12 +28,7 @@ if (ArticleTitle.length>2){
 //}
 
 
-var displaycomments = document.getElementById('displaycomment');
-var entercomments = document.getElementById('entercomment');
 
-var submitLogin=document.getElementById("btnsubmitLogin");
-var submitRegister=document.getElementById("btnsubmitRegister");
-var articleList=document.getElementById("articles");
 
 function getcomments()
 {
