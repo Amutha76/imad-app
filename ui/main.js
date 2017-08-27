@@ -79,7 +79,7 @@ function getcomments()
 function loadlogin(){
     var rtnloginval='logout';
     var request=new XMLHttpRequest();
-    request.open('POST','/check-login',true);
+    request.open('GET','/check-login',true);
     request.send(null); 
     request.onreadystatechange=function(){
     var checklogin = JSON.parse(this.responseText);
