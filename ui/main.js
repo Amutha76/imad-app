@@ -25,7 +25,7 @@ if (ArticleTitle.length>2){
  //   }else{
  //        submitLogin.value="Logout";
  //   }
-}
+//}
 //}else {
    
     //getArticles();
