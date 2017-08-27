@@ -39,7 +39,7 @@ function getcomments()
                 var commentsData = JSON.parse(this.responseText);
                 alert('Number os rows are ' + commentsData.length);
                 var commentshtml='';
-                for (i=0;i<commentsData.length;i++){
+                for (var i=0;i<commentsData.length;i++){
                     alert('jj');
                     commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
                 }
