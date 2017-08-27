@@ -106,7 +106,7 @@ app.get('/check-login',function(req,res){
                  res.status(403).send('Invalid username or Password');
              } else{
                  console.log(result.rows[0].username);
-                 res.send(result.rows[0].username);
+                 res.send(result.rows[0]);
              }
             }
         });
