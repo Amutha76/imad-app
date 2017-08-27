@@ -72,18 +72,19 @@ function loadlogin(){
     request.open('GET','/check-login',true);
     request.send(null); 
     request.onreadystatechange=function(){
-  
+    var checklogin = JSON.parse(this.responseText);
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-              checklogin='login';
-           //    alert('you are logged in ' + checklogin );
+              //checklogin='login';
+               alert('you are logged in ' + checklogin );
             }else{
-              checklogin='logout';    
-            //  alert('you are logged out ' + checklogin);
+            //  checklogin='logout';    
+              alert('you are logged out ' + checklogin);
             }
           
      }
  };
+ return checklogin;
 }
 
 function getArticles(){
