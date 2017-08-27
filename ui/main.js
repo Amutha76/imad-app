@@ -31,7 +31,7 @@ function getcomments()
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
     //request.send(null);
-  
+    alert(request.session.auth.userId);
     if(request.session && request.session.auth && request.session.auth.userId){
         alert('you are logged in');
     }else
