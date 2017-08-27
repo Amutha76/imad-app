@@ -77,15 +77,16 @@ function loadlogin(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               rtnloginval='login';
-               alert('you are logged in ' + checklogin );
+              //alert('you are logged in ' + checklogin );
+              return rtnloginval;
             }else{
-              rtnloginval='logout';    
+              rtnloginval='logout';  
+              return rtnloginval;
               //alert('you are logged out ' + checklogin);
             }
      }
  };
-alert ('I am about to return ' + rtnloginval );
- return rtnloginval;
+
 }
 
 function getArticles(){
