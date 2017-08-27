@@ -17,6 +17,14 @@ if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
 }
+else{
+    var checklogin=loadlogin();
+    if(checklogin=='logout'){
+        submitLogin.value="Login";
+    }else{
+         submitLogin.value="Login";
+    }
+}
 //}else {
    
     //getArticles();
