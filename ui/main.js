@@ -11,15 +11,10 @@ var txtcomment=document.getElementById("txtcomment");
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
+var checklogin='';
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
-    if(submitLogin.value=='Login'){
-        txtcomment.style.visibility = "hidden";
-    }else{
-         txtcomment.style.visibility = "visible";
-    }
-      
     getcomments();
 }
 //}else {
@@ -35,11 +30,17 @@ function getcomments()
   // var currentArticleTitle = window.location.pathname.split('/')[1];
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
+    loadlogin();
+    if(checklogin=='login'){
+        txtcomment.style.visibility = "hidden";
+    }else{
+         txtcomment.style.visibility = "visible";
+    }
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
     //request.send(null);
-   loadlogin();
+   
     
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -73,10 +74,11 @@ function loadlogin(){
   
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-             alert('you are logged in');
+            // alert('you are logged in');
+             checklogin='login';
             }else{
-                
-              alert('you are logged out');
+              checklogin='logout';    
+             // alert('you are logged out');
             }
           
      }
