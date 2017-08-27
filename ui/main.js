@@ -55,6 +55,26 @@ function getcomments()
      };
 }
 
+
+function loadlogin(){
+ 
+    var request=new XMLHttpRequest();
+    request.open('GET','/check-login',true);
+    request.send(null); 
+    request.onreadystatechange=function(){
+  
+     if (request.readyState=== XMLHttpRequest.DONE){
+          if (request.status === 200) {
+             alert('you are logged in');
+            }else{
+                
+              alert('you are logged out');
+            }
+          
+     }
+ };
+}
+
 function getArticles(){
     
     var articleList=document.getElementById("articles");
@@ -82,7 +102,6 @@ function getArticles(){
 }
 
 
-if (submitLogin !== null){
 submitLogin.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
@@ -158,26 +177,8 @@ submitRegister.onclick=function(){
  
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
-getArticles();
 
-function loadlogin(){
+
     
-    
-    var request=new XMLHttpRequest();
-    request.open('GET','/check-login',true);
-    request.send(null); 
-    request.onreadystatechange=function(){
-  
-     if (request.readyState=== XMLHttpRequest.DONE){
-          if (request.status === 200) {
-             alert('you are logged in');
-            }else{
-                
-              alert('you are logged out');
-            }
-          
-     }
- 
-};
-    
-}
+
+getArticles();
