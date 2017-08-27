@@ -11,7 +11,7 @@ var txtcomment=document.getElementById("txtcomment");
 var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
-var checklogin='logout';
+var checklogin=false;
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
@@ -21,7 +21,7 @@ else{
     checklogin=loadlogin();
     alert('testing checklogin 1' +checklogin );
  //   alert('testing checklogin 2' +checklogin.value );
-    if(checklogin=='logout'){
+    if(checklogin  !== true){
         submitLogin.value="Login";
     }else{
          submitLogin.value="Logout";
@@ -42,7 +42,7 @@ function getcomments()
     var request=new XMLHttpRequest();
     var checklogin=loadlogin();
     alert('Check Login value is ' + checklogin );
-    if(checklogin=='logout'){
+    if(checklogin !==true){
         entercomments.style.visibility = "hidden";
     }else{
          entercomments.style.visibility = "visible";
