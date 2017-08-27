@@ -23,6 +23,7 @@ if (ArticleTitle.length>2){
     getcomments();
 }else{
     loadlogin();
+    getArticles();
 }
 //  checklogin=loadlogin();
 //    alert('testing checklogin 1' +checklogin );
@@ -261,4 +262,3 @@ function logoutvisible(){
   loginarea.style.visibility = "hidden";
   logoutarea.style.visibility = "visible";
 }
-getArticles();
