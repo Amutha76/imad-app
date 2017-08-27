@@ -103,6 +103,10 @@ app.post('/insertcomment/:articleTitle',function(req,res){
                 }else{
                     var articleid=result.rows[0].id;
                     var date=new Date();
+                    console.log('comment is '+req.body.comment);
+                    console.log('author id :'+ req.session.auth.userId);
+                    console.log('article id '+ articleid);
+                    
                     pool.query('insert into comment (comment,auth_id,article_id) values($1,$2,$3)',[req.body.comment,req.session.auth.userId,articleid],function(err,result){
                         if(err){
                             err.status(500).send(err.toString());
