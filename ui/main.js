@@ -171,6 +171,7 @@ if(submitLogin !==null){
       
           request.open('POST','/insertcomment/'+currentArticleTitle,true);
           request.setRequestHeader('Content-Type','application/json');
+          alert('comment is' + comment);
           request.send(JSON.stringify({comment:comment})); 
          
           request.onreadystatechange=function(){
