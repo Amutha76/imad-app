@@ -225,7 +225,7 @@ app.post('/getcomments',function(req,res){
            res.status(404).send("Article Not Found");    
         }
         else{
-            console.log('Number of rows ' + result.rows.count)
+            console.log('Number of rows ' + result.rows.length);
            res.send(JSON.stringify(result.rows));
         }
     });
