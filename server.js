@@ -91,7 +91,41 @@ app.post('/login',function(req,res){
        }
     });
 });
+app.post('/insertcomment/:articleTitle',function(req,res){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        pool.query('select id from article where title=$1 and author_id=$2',[req.params.articleTitle,req.session.auth.userId],function(err,result){
+            if (err){
+                res.status(500).send(err.toString());
+            }else{
+                if(result.rows.length===0){
+                    res.status(400).send('Article Not found');
+                }else{
+                    var articleid=result.rows[0].id;
+                    var date=new Date();
+                    pool.query('insert into comment (comment,auth_id,article_id,date) values($1,$2,$3,$4)',[req.body.comment,req.session.auth.userId,articleid,date],function(err,result){
+                        if(err){
+                            err.status(500).send(err.toString());
+                        }else{
+                            err.status(200).send('Comment successfully inserted');
+                        }
+                    });
+                        
+                    
+                }
+            }
+        });
+            
+        
+    }
+        
+            
 
+            
+        
+        
+        
+    
+});
 app.get('/check-login',function(req,res){
    // var checklogin='logout';
 
