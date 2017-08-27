@@ -222,18 +222,30 @@ function loadlogin(){
    // alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
-            alert('load login is true');
-           togglecommenton() ;
+             logoutvisible()
+            
             }else{
             
-            togglecommentoff();  
+             loginvisible();  
               
             }
      }else{
-           togglecommentoff();
+            loginvisible();
      }
  };
 
 }    
 
+function loginvisible(){
+  var loginarea = document.getElementById('login_area');
+  var logoutarea = document.getElementById('logout_area');
+  loginarea.style.visibility = "visible";
+  logoutarea.style.visibility = "hidden";
+}
+function logoutvisible(){
+  var loginarea = document.getElementById('login_area');
+  var logoutarea = document.getElementById('logout_area');
+  loginarea.style.visibility = "hidden";
+  logoutarea.style.visibility = "visible";
+}
 getArticles();
