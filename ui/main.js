@@ -39,6 +39,7 @@ function getcomments()
                 var commentsrows=commentsData.length;
                 var commentshtml='';
                 for (var i=0; i<commentsrows; i++){
+                    alert('hh');
                     commentshtml+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on ${commentsData[i].date.toLocaleDateString()}</div><p>`;
                 }
                 alert('comments ' + commentshtml);
