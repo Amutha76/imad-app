@@ -31,6 +31,13 @@ function getcomments()
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
     //request.send(null);
+  
+    if(request.session && request.session.auth && request.session.auth.userId){
+        alert('you are logged in');
+    }else
+    {
+        alert('you are logged out');
+    }
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             
