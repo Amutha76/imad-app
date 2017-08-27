@@ -180,9 +180,7 @@ if(submitLogin !==null){
                       // alert('User successfully logged in');
                        comment.innerHTML='';
                        loadcomment();
-                     } else {
-                         alert('Cannot insert comment');
-                     }
+                     } 
                 }
             };
       };
