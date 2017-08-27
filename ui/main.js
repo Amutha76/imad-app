@@ -18,11 +18,11 @@ if (ArticleTitle.length>2){
     getcomments();
 }
 else{
-    var checklogin=loadlogin();
+    checklogin=loadlogin();
     if(checklogin=='logout'){
         submitLogin.value="Login";
     }else{
-         submitLogin.value="Login";
+         submitLogin.value="Logout";
     }
 }
 //}else {
