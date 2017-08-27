@@ -83,9 +83,10 @@ function loadlogin(){
     request.send(null); 
     request.onreadystatechange=function(){
     var checklogin = this.responseText;
-    alert('I am inside loadlogin ' + checklogin );
+   // alert('I am inside loadlogin ' + checklogin );
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
+            alert('load login is true');
             return true ;
             }else{
             
