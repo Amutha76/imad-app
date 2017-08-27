@@ -31,7 +31,7 @@ function getcomments()
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     var checklogin=loadlogin();
-  //  alert('Check Login value is ' + checklogin );
+    alert('Check Login value is ' + checklogin );
     if(checklogin=='logout'){
         entercomments.style.visibility = "hidden";
     }else{
@@ -77,12 +77,13 @@ function loadlogin(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               rtnloginval='login';
-              //alert('you are logged in ' + checklogin );
+              alert('I am about to return ' + checklogin);
               return rtnloginval;
             }else{
               rtnloginval='logout';  
+              alert('I am about to return ' + checklogin);
               return rtnloginval;
-              //alert('you are logged out ' + checklogin);
+             
             }
      }
  };
