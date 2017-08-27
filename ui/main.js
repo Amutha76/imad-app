@@ -186,7 +186,7 @@ if(submitLogin !==null){
                 }
             };
            comment.innerHTML='';
-           loadcomment(); 
+            getcomments();
       };
  // }
   
