@@ -16,6 +16,8 @@ var checklogin=false;
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
+}else{
+    loadlogin();
 }
 //  checklogin=loadlogin();
 //    alert('testing checklogin 1' +checklogin );
