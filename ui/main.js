@@ -39,10 +39,10 @@ function getcomments()
                 var commentsrows=commentsData.length;
                 var commentshtml='';
                 for (var i=0; i<commentsrows; i++){
-                    commentsData+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on ${commentsData[i].date.toLocaleDateString()}</div><p>`;
+                    commentshtml+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on ${commentsData[i].date.toLocaleDateString()}</div><p>`;
                 }
-                alert('comments ' + commentsData);
-                displaycomments.innerHTML=commentsData;
+                alert('comments ' + commentshtml);
+                displaycomments.innerHTML=commentshtml;
             }else{
               displaycomments.innerHTML='No comments for this article';    
             }
