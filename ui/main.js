@@ -42,11 +42,11 @@ function getcomments()
     var request=new XMLHttpRequest();
    // var checklogin=loadlogin();
     //alert('Check Login value is ' + checklogin );
-    if(loadlogin() ===true){
-        entercomments.style.visibility = "hidden";
-    }else{
-         entercomments.style.visibility = "visible";
-    }
+   // if(loadlogin() ===true){
+   //     entercomments.style.visibility = "hidden";
+    //}else{
+    //     entercomments.style.visibility = "visible";
+//    }
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
@@ -87,14 +87,14 @@ function loadlogin(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
             alert('load login is true');
-            return true ;
+           togglecommenton() ;
             }else{
             
-            return false;  
+            togglecommentoff();  
               
             }
      }else{
-          return false;
+           togglecommentoff();
      }
  };
 
@@ -202,8 +202,13 @@ submitRegister.onclick=function(){
  
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
+function togglecommenton(){
+     entercomments.style.visibility = "visible";
+}    
 
-
+function togglecommentoff(){
+      entercomments.style.visibility = "hidden";
+}
     
 
 getArticles();
