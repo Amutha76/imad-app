@@ -162,7 +162,7 @@ if(submitLogin !==null){
       };
 }
   
-  if(submitcomment !==null){
+ // if(submitcomment !==null){
       submitcomment.onclick=function(){
       
       var comment=document.getElementById("txtcomment").value;  
@@ -186,7 +186,7 @@ if(submitLogin !==null){
                 }
             };
       };
-  }
+ // }
   
   if(submitlogout !==null){
       submitcomment.onclick=function(){
