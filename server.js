@@ -166,7 +166,7 @@ var htmlContent=
             </p>
             <div id="entercomment">
             <textarea id="txtcomment" rows="5" cols="100" placeholder="Enter your comments here"></textarea><p>
-            <input type="submit" id="btnsubmit"></input>
+            <input type="submit" id="btnsubmitcomment"></input>
             </div>
             <div id="displaycomment"></div>
             
