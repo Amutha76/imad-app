@@ -3,7 +3,7 @@ console.log("I am inside main");
 //alert('I am  testing window location' + window.location.pathname );
 var currentArticleTitle='';
 var ArticleTitle = window.location.pathname.split('/');
-alert(ArticleTitle.length + window.location.pathname);
+//alert(ArticleTitle.length + window.location.pathname);
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
@@ -25,7 +25,7 @@ var articleList=document.getElementById("articles");
 function getcomments()
 {
   // var currentArticleTitle = window.location.pathname.split('/')[1];
-    alert('I am inside getcomments' + currentArticleTitle );
+   // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
@@ -33,6 +33,7 @@ function getcomments()
     //request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
+             alert('ready status : '+request.status);
             if (request.status === 200) {
                 var commentsData = JSON.parse(this.responseText);
                 var commentshtml='';
