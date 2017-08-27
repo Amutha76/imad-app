@@ -134,8 +134,7 @@ submitLogin.onclick=function(){
   var username=document.getElementById("txtName").value;  
   var password=document.getElementById("pwdPassword").value;
   var request=new XMLHttpRequest();
-  if (submitLogin.value=='Login'){
-     
+  
       request.open('POST','/login',true);
       request.setRequestHeader('Content-Type','application/json');
       request.send(JSON.stringify({username:username,password:password})); 
@@ -145,8 +144,8 @@ submitLogin.onclick=function(){
          if (request.readyState=== XMLHttpRequest.DONE){
                 
                 if(request.status==200){
-                   alert('User successfully logged in');
-                   
+                  // alert('User successfully logged in');
+                   logoutvisible();
                  } else if (request.status==403){
                      alert('Invalid username and password');
                  } else if (request.status==500){
@@ -154,28 +153,8 @@ submitLogin.onclick=function(){
                  }
             }
         };
-      submitLogin.value='Logout';  
-  }else{
-     
-      request.open('GET','/logout',true);
-      request.setRequestHeader('Content-Type','application/json');
-      request.send(null); 
-     
-      request.onreadystatechange=function(){
-      
-         if (request.readyState=== XMLHttpRequest.DONE){
-                
-                if(request.status==200){
-                   alert('User successfully logged out');
-                   
-                 } else if (request.status==500){
-                     alert('Internal server error');
-                 }
-            }
-      submitLogin.value='Login';
   };
-}
-};
+  
 submitRegister.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
