@@ -94,11 +94,13 @@ app.post('/login',function(req,res){
 app.post('/insertcomment/:articleTitle',function(req,res){
     console.log('inserting comment' + req.body.comment);
     if(req.session && req.session.auth && req.session.auth.userId){
+        console.log('inserting article title' + req.params.articleTitle);
         pool.query('select id from article where title=$1 and author_id=$2',[req.params.articleTitle,req.session.auth.userId],function(err,result){
             if (err){
                 res.status(500).send(err.toString());
             }else{
                 if(result.rows.length===0){
+                    console.log('article not found');
                     res.status(400).send('Article Not found');
                 }else{
                     var articleid=result.rows[0].id;
