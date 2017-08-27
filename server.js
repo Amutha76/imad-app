@@ -98,6 +98,7 @@ app.post('/insertcomment/:articleTitle',function(req,res){
         console.log('author id :'+ req.session.auth.userId);
         pool.query('select id from article where title=$1',[req.params.articleTitle],function(err,result){
             if (err){
+                console.log('error');
                 res.status(500).send(err.toString());
             }else{
                 if(result.rows.length===0){
