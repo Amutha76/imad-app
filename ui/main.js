@@ -40,10 +40,10 @@ function getcomments()
                 var commentshtml='';
                 for (var i=0; i<commentsrows; i++){
                     alert('hh');
-                    commentshtml+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on ${commentsData[i].date.split('T')[0]}</div><p>`;
+                    commentshtml+=`<div>' ${commentsData[i].comment}  </div><div> By ${commentsData[i].username} on  ${commentsData[i].date.split('T')[0]}</div><p>`;
                     alert(commentshtml);
                 }
-                alert('comments ' + commentshtml);
+             //   alert('comments ' + commentshtml);
                 displaycomments.innerHTML=commentshtml;
             }else{
               displaycomments.innerHTML='No comments for this article';    
