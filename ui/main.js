@@ -12,7 +12,7 @@ var submitLogin=document.getElementById("btnsubmitLogin");
 var submitRegister=document.getElementById("btnsubmitRegister");
 var articleList=document.getElementById("articles");
 var submitcomment=document.getElementById("btnsubmitcomment");
-var submitcomment=document.getElementById("btnsubmitLogout");
+var submitlogout=document.getElementById("btnsubmitLogout");
 //var checklogin=false;
 
 
@@ -188,26 +188,21 @@ if(submitLogin !==null){
       };
   }
   
-  if(submitcomment !==null){
+  if(submitlogout !==null){
       submitcomment.onclick=function(){
-      
-      var comment=document.getElementById("txtcomment").value;  
       
       var request=new XMLHttpRequest();
       
-          request.open('POST','/insertcomment/'+currentArticleTitle,true);
+          request.open('GET','/logout',true);
           request.setRequestHeader('Content-Type','application/json');
-          alert('comment is' + comment);
-          request.send(JSON.stringify({comment:comment})); 
          
           request.onreadystatechange=function(){
           
              if (request.readyState=== XMLHttpRequest.DONE){
                     
                     if(request.status==200){
-                      // alert('User successfully logged in');
-                       comment.innerHTML='';
-                       loadcomment();
+                       alert('You are logged out successfully');
+                        loadlogin();
                      } 
                 }
             };
