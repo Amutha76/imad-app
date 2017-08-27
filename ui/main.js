@@ -33,13 +33,14 @@ function getcomments()
     //request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-             alert('ready status : '+request.status);
+             //alert('ready status : '+request.status);
             if (request.status === 200) {
                 var commentsData = JSON.parse(this.responseText);
                 var commentshtml='';
                 for (i=0;i<commentsData.length;i++){
                     commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
                 }
+                alert('comments ' + commentsData)
                 displaycomments.innerHTML=commentsData;
             }else{
               displaycomments.innerHTML='No comments for this article';    
