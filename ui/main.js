@@ -180,13 +180,17 @@ if(submitLogin !==null){
                     
                     if(request.status==200){
                       // alert('User successfully logged in');
-                       comment.innerHTML='';
+                       
                         getcomments();
+                        comment.innerHTML='';
                      } 
+                      getcomments();
+                      comment.innerHTML='';
                 }
             };
-           comment.innerHTML='';
+           
             getcomments();
+            comment.innerHTML='';
       };
  // }
   
