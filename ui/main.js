@@ -17,15 +17,14 @@ if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
     getcomments();
 }
-else{
-    checklogin=loadlogin();
-    alert('testing checklogin 1' +checklogin );
+//  checklogin=loadlogin();
+//    alert('testing checklogin 1' +checklogin );
  //   alert('testing checklogin 2' +checklogin.value );
-    if(checklogin  !== true){
-        submitLogin.value="Login";
-    }else{
-         submitLogin.value="Logout";
-    }
+  //  if(checklogin  !== true){
+ //        submitLogin.value="Login";
+ //   }else{
+ //        submitLogin.value="Logout";
+ //   }
 }
 //}else {
    
@@ -47,6 +46,7 @@ function getcomments()
     //}else{
     //     entercomments.style.visibility = "visible";
 //    }
+    loadlogin();
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
@@ -77,7 +77,7 @@ function getcomments()
 
 
 function loadlogin(){
-    var rtnloginval='logout';
+   // var rtnloginval='logout';
     var request=new XMLHttpRequest();
     request.open('GET','/check-login',true);
     request.send(null); 
