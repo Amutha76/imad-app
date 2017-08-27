@@ -76,10 +76,10 @@ function loadlogin(){
      if (request.readyState=== XMLHttpRequest.DONE){
           if (request.status === 200) {
               checklogin='login';
-               alert('you are logged in ' + checklogin );
+           //    alert('you are logged in ' + checklogin );
             }else{
               checklogin='logout';    
-              alert('you are logged out ' + checklogin);
+            //  alert('you are logged out ' + checklogin);
             }
           
      }
