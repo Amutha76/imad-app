@@ -31,13 +31,7 @@ function getcomments()
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
     //request.send(null);
-    alert(request.session.auth.userId);
-    if(request.session && request.session.auth && request.session.auth.userId){
-        alert('you are logged in');
-    }else
-    {
-        alert('you are logged out');
-    }
+   loadlogin();
     
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -144,18 +138,24 @@ submitRegister.onclick=function(){
 //var currentArticleTitle = window.location.pathname.split('/')[2];
     
 getArticles();
-//request.onreadystatechange=function(){
-//    if (request.readyState === XMLHttpRequest.DONE) {
-//            if (request.status === 200) {
-//                alert('I am ready');
-//                if (ArticleTitle.length>2){
-//                 alert('I am going to get comments');
-//                 getcomments();
-//                }
-//            }
-        
-//    }else{
-//        alert('Not ready');
-//    }
-//}
-//getcomments();
+
+function loadlogin(){
+    
+    
+    var request=new XMLHttpRequest();
+    request.open('GET','/check-login',true);
+    request.send(null); 
+    request.onreadystatechange=function(){
+  
+     if (request.readyState=== XMLHttpRequest.DONE){
+          if (request.status === 200) {
+             alert('you are logged in');
+            }else{
+              alert('you are logged out');
+            }
+          
+     }
+ 
+};
+    
+}
