@@ -42,7 +42,7 @@ function getcomments()
     var request=new XMLHttpRequest();
    // var checklogin=loadlogin();
     //alert('Check Login value is ' + checklogin );
-    if(loadlogin() !==true){
+    if(loadlogin() ===true){
         entercomments.style.visibility = "hidden";
     }else{
          entercomments.style.visibility = "visible";
