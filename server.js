@@ -216,7 +216,7 @@ app.post('/getcomments',function(req,res){
     console.log('Inside get-comments');
     console.log(articleTitle);
     //var auth_id=req.session.auth.auth_id;
-    pool.query("select comment, comment.date from article, comment where comment.article_id=article.id and article.title =$1", [articleTitle] , function(err,result){
+    pool.query('select comment.comment,comment.date,username from "user",article,comment where "user".id=auth_id and article.id=comment.article_id and articl.title=$1', [articleTitle] , function(err,result){
         if(err){
            res.status(500).send(err.toString());     
         }else if(result.rows.length===0){
