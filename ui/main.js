@@ -87,7 +87,7 @@ submitLogin.onclick=function(){
   
   var username=document.getElementById("txtName").value;  
   var password=document.getElementById("pwdPassword").value;
- 
+  alert('Login Value : ' + submitLogin.value);
   var request=new XMLHttpRequest();
   request.open('POST','/login',true);
   request.setRequestHeader('Content-Type','application/json');
@@ -99,6 +99,7 @@ submitLogin.onclick=function(){
             
             if(request.status==200){
                alert('User successfully logged in');
+               
              } else if (request.status==403){
                  alert('Invalid username and password');
              } else if (request.status==500){
@@ -151,6 +152,7 @@ function loadlogin(){
           if (request.status === 200) {
              alert('you are logged in');
             }else{
+                
               alert('you are logged out');
             }
           
