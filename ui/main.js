@@ -31,7 +31,7 @@ function getcomments()
    // alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
     var checklogin=loadlogin();
-    alert('Check Login value is ' + checklogin );
+  //  alert('Check Login value is ' + checklogin );
     if(checklogin=='logout'){
         entercomments.style.visibility = "hidden";
     }else{
@@ -84,6 +84,7 @@ function loadlogin(){
             }
      }
  };
+alert ('I am about to return ' + rtnloginval );
  return rtnloginval;
 }
 
