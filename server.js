@@ -92,7 +92,7 @@ app.post('/login',function(req,res){
     });
 });
 app.post('/insertcomment/:articleTitle',function(req,res){
-    console.log(req.body.comment);
+    console.log('inserting comment' + req.body.comment);
     if(req.session && req.session.auth && req.session.auth.userId){
         pool.query('select id from article where title=$1 and author_id=$2',[req.params.articleTitle,req.session.auth.userId],function(err,result){
             if (err){
