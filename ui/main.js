@@ -35,11 +35,12 @@ function getcomments()
         if (request.readyState === XMLHttpRequest.DONE) {
              //alert('ready status : '+request.status);
             if (request.status === 200) {
-                alert('I am inside readystate ');
+                //alert('I am inside readystate ');
                 var commentsData = JSON.parse(this.responseText);
-                alert('Number os rows are ' + commentsData.length);
+                var commentsrows=commentsData.length;
+                alert('Number of rows are ' + commentsrows);
                 var commentshtml='';
-                for (var i=0;i<commentsData.length;i++){
+                for (var i=0; i<commentsrows; i++){
                     alert('jj');
                     commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
                 }
