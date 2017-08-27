@@ -27,7 +27,7 @@ function getcomments()
   // var currentArticleTitle = window.location.pathname.split('/')[1];
     alert('I am inside getcomments' + currentArticleTitle );
     var request=new XMLHttpRequest();
-    request.open('POST','/getcomments/'+currentArticleTitle,true);
+    request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
     //request.send(null);
