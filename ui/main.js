@@ -40,6 +40,7 @@ function getcomments()
                 alert('Number os rows are ' + commentsData.length);
                 var commentshtml='';
                 for (i=0;i<commentsData.length;i++){
+                    alert('jj');
                     commentsData+='<div>'+commentsData[i].comment+'</div><div>'+commentsData[i].date+'</div><p>';
                 }
                 alert('comments ' + commentsData)
