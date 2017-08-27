@@ -93,7 +93,7 @@ app.post('/login',function(req,res){
 });
 
 app.get('/check-login',function(req,res){
-    var checklogin='logout';
+   // var checklogin='logout';
     if(req.session && req.session.auth && req.session.auth.userId){
         checklogin='login';
         //res.send('You are logged in successfully as ' + req.session.auth.userId.toString());
