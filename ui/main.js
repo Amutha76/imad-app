@@ -188,7 +188,7 @@ if(submitLogin !==null){
   
  if(submitRegister !==null){ 
     submitRegister.onclick=function(){
-      
+      alert('I am calling insert');
       var username=document.getElementById("txtName").value;  
       var password=document.getElementById("pwdPassword").value;
      
