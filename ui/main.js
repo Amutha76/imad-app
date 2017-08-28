@@ -186,6 +186,8 @@ if(submitLogin !==null){
                         comment.innerHTML='';
                      } else{
                          alert('Request status is' + request.status);
+                          comment.innerHTML='';
+                          getcomments();
                      }
           //            getcomments();
         //              comment.innerHTML='';
