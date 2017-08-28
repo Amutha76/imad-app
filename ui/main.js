@@ -169,10 +169,10 @@ if(submitLogin !==null){
       
       var request=new XMLHttpRequest();
       
-          request.open('POST','/insertcomment/'+ currentArticleTitle,true);
+          request.open('POST','/insertcomment',true);
           request.setRequestHeader('Content-Type','application/json');
           alert('comment is' + comment);
-         request.send(JSON.stringify({comment: comment}));  
+         request.send(JSON.stringify({comment: comment,currentArticleTitle:currentArticleTitle}));  
          
           request.onreadystatechange=function(){
           
