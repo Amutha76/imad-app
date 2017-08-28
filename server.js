@@ -112,10 +112,13 @@ app.post('/insertcomment',function(req,res){
                     console.log('article id '+ articleid);
                     
                     pool.query('insert into comment (comment,auth_id,article_id) values($1,$2,$3)',[req.body.comment,req.session.auth.userId,articleid],function(err,result){
+                        console.log(err.toString());
                         if(err){
                             err.status(500).send(err.toString());
+                            result.status(500).send(err.toString());
                         }else{
                             err.status(200).send('Comment successfully inserted');
+                            result.status(200).send('Comment successfully inserted');
                         }
                     });
                         
