@@ -166,8 +166,8 @@ if(submitLogin !==null){
  // if(submitcomment !==null){
       submitcomment.onclick=function(){
       
-      var comment=document.getElementById("txtcomment");  
-      
+      var txtcomment=document.getElementById("txtcomment");  
+      var comment=txtcomment.value;
       var request=new XMLHttpRequest();
       
           request.open('POST','/insertcomment',true);
