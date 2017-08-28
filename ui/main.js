@@ -183,11 +183,11 @@ if(submitLogin !==null){
                        alert('comment successfully inserted');
                        
                         getcomments();
-                        comment.value='';
+                        txtcomment.value='';
                      } else{
                          alert('Request status is' + request.status);
-                          comment.value='Enter ur comments';
-                          alert('Changed comment value is' +  comment.value);
+                          txtcomment.value='Enter ur comments';
+                          alert('Changed comment value is' +  txtcomment.value);
                           getcomments();
                      }
           //            getcomments();
