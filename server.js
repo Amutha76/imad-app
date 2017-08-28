@@ -91,12 +91,12 @@ app.post('/login',function(req,res){
        }
     });
 });
-app.post('/insertcomment/:articleTitle',function(req,res){
+app.post('/insertcomment',function(req,res){
     console.log('inserting comment' + req.body.comment);
     if(req.session && req.session.auth && req.session.auth.userId){
-        console.log('inserting article title' + req.params.articleTitle);
+        console.log('inserting article title' + req.body.currentArticleTitle);
         console.log('author id :'+ req.session.auth.userId);
-        pool.query('select id from article where title=$1',[req.params.articleTitle],function(err,result){
+        pool.query('select id from article where title=$1',[req.body.currentArticleTitle],function(err,result){
             if (err){
                 console.log('error');
                 res.status(500).send(err.toString());
