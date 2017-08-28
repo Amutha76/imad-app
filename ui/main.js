@@ -20,6 +20,7 @@ var submitlogout=document.getElementById("btnsubmitLogout");
 
 if (ArticleTitle.length>2){
     currentArticleTitle = window.location.pathname.split('/')[2];
+    loadcomment();
     getcomments();
 }else{
     loadlogin();
@@ -54,7 +55,7 @@ function getcomments()
     //}else{
     //     entercomments.style.visibility = "visible";
 //    }
-    loadcomment();
+    
     request.open('POST','/getcomments',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({currentArticleTitle:currentArticleTitle}));
@@ -179,18 +180,20 @@ if(submitLogin !==null){
              if (request.readyState=== XMLHttpRequest.DONE){
                     
                     if(request.status==200){
-                      // alert('User successfully logged in');
+                       alert('comment successfully inserted');
                        
                         getcomments();
                         comment.innerHTML='';
-                     } 
-                      getcomments();
-                      comment.innerHTML='';
+                     } else{
+                         alert('Request status is' + request.status);
+                     }
+          //            getcomments();
+        //              comment.innerHTML='';
                 }
             };
            
-            getcomments();
-            comment.innerHTML='';
+           // getcomments();
+        //    comment.innerHTML='';
       };
  // }
   
