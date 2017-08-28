@@ -186,7 +186,7 @@ if(submitLogin !==null){
                         comment.value='';
                      } else{
                          alert('Request status is' + request.status);
-                          comment.value='';
+                          comment.value='Enter ur comments';
                           getcomments();
                      }
           //            getcomments();
