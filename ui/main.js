@@ -172,7 +172,7 @@ if(submitLogin !==null){
       
           request.open('POST','/insertcomment',true);
           request.setRequestHeader('Content-Type','application/json');
-          alert('comment is' + comment);
+         // alert('comment is' + comment);
          request.send(JSON.stringify({comment: comment,currentArticleTitle:currentArticleTitle}));  
          
           request.onreadystatechange=function(){
@@ -180,14 +180,14 @@ if(submitLogin !==null){
              if (request.readyState=== XMLHttpRequest.DONE){
                     
                     if(request.status==200){
-                       alert('comment successfully inserted');
+                    //   alert('comment successfully inserted');
                        
                         getcomments();
                         txtcomment.value='';
                      } else{
-                         alert('Request status is' + request.status);
+                      //   alert('Request status is' + request.status);
                           txtcomment.value='Enter ur comments';
-                          alert('Changed comment value is' +  txtcomment.value);
+                        //  alert('Changed comment value is' +  txtcomment.value);
                           getcomments();
                      }
           //            getcomments();
