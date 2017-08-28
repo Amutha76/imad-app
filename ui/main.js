@@ -183,10 +183,10 @@ if(submitLogin !==null){
                        alert('comment successfully inserted');
                        
                         getcomments();
-                        comment.innerHTML='';
+                        comment.value='';
                      } else{
                          alert('Request status is' + request.status);
-                          comment.innerHTML='';
+                          comment.value='';
                           getcomments();
                      }
           //            getcomments();
